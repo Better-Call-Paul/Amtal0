@@ -1,2 +1,24 @@
-cmake_minimum_required(VERSION 3.8 FATAL_ERROR)
-project(Amtal LANGUAGES CXX CUDA)
+cmake_minimum_required(VERSION 3.10)
+project(trading-system)
+
+# Use C++17
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Include directories for header files
+include_directories(
+    ${PROJECT_SOURCE_DIR}/include
+    ${PROJECT_SOURCE_DIR}/lib/asio/asio/include  # Path to the ASIO library
+)
+
+# Add definitions for ASIO
+add_definitions(-DASIO_STANDALONE)
+
+# Source files
+file(GLOB_RECURSE SOURCES "src/cpp/*.cpp")
+
+# Executable
+add_executable(${PROJECT_NAME} ${SOURCES})
+
+# Linking libraries (if you're using Boost.ASIO, you need to link Boost libraries here)
+# target_link_libraries(${PROJECT_NAME} ...)

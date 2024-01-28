@@ -1,0 +1,3 @@
+/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles/trading-system.dir
+/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles/edit_cache.dir
+/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles/rebuild_cache.dir
