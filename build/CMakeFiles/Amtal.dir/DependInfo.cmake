@@ -8,8 +8,16 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/paulchan/Desktop/projects/Amtal0/src/main.cpp" "CMakeFiles/Amtal.dir/src/main.cpp.o" "gcc" "CMakeFiles/Amtal.dir/src/main.cpp.o.d"
-  "/Users/paulchan/Desktop/projects/Amtal0/src/neural_network.cpp" "CMakeFiles/Amtal.dir/src/neural_network.cpp.o" "gcc" "CMakeFiles/Amtal.dir/src/neural_network.cpp.o.d"
+  "/Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/ObjectPool.cpp" "CMakeFiles/Amtal.dir/src/cpp/core/ObjectPool.cpp.o" "gcc" "CMakeFiles/Amtal.dir/src/cpp/core/ObjectPool.cpp.o.d"
+  "/Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Order.cpp" "CMakeFiles/Amtal.dir/src/cpp/core/Order.cpp.o" "gcc" "CMakeFiles/Amtal.dir/src/cpp/core/Order.cpp.o.d"
+  "/Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/OrderBook.cpp" "CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.o" "gcc" "CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.o.d"
+  "/Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/TradingEngine.cpp" "CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.o" "gcc" "CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.o.d"
+  "/Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Utils.cpp" "CMakeFiles/Amtal.dir/src/cpp/core/Utils.cpp.o" "gcc" "CMakeFiles/Amtal.dir/src/cpp/core/Utils.cpp.o.d"
+  "/Users/paulchan/Desktop/projects/Amtal0/src/cpp/data_feeds/MarketDataHandler.cpp" "CMakeFiles/Amtal.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o" "gcc" "CMakeFiles/Amtal.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o.d"
+  "/Users/paulchan/Desktop/projects/Amtal0/src/cpp/main.cpp" "CMakeFiles/Amtal.dir/src/cpp/main.cpp.o" "gcc" "CMakeFiles/Amtal.dir/src/cpp/main.cpp.o.d"
+  "/Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/APIServer.cpp" "CMakeFiles/Amtal.dir/src/cpp/server/APIServer.cpp.o" "gcc" "CMakeFiles/Amtal.dir/src/cpp/server/APIServer.cpp.o.d"
+  "/Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Server.cpp" "CMakeFiles/Amtal.dir/src/cpp/server/Server.cpp.o" "gcc" "CMakeFiles/Amtal.dir/src/cpp/server/Server.cpp.o.d"
+  "/Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Session.cpp" "CMakeFiles/Amtal.dir/src/cpp/server/Session.cpp.o" "gcc" "CMakeFiles/Amtal.dir/src/cpp/server/Session.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

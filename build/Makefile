@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /Users/paulchan/Desktop/projects/Amtal0/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/Applications/CMake.app/Contents/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -117,24 +127,92 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named trading-system
+# Target rules for targets named Amtal
 
 # Build rule for target.
-trading-system: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 trading-system
-.PHONY : trading-system
+Amtal: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Amtal
+.PHONY : Amtal
 
 # fast build rule for target.
-trading-system/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/build
-.PHONY : trading-system/fast
+Amtal/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/build
+.PHONY : Amtal/fast
+
+#=============================================================================
+# Target rules for targets named Tests
+
+# Build rule for target.
+Tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests
+.PHONY : Tests
+
+# fast build rule for target.
+Tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/build
+.PHONY : Tests/fast
+
+src/cpp/core/ObjectPool.o: src/cpp/core/ObjectPool.cpp.o
+.PHONY : src/cpp/core/ObjectPool.o
+
+# target to build an object file
+src/cpp/core/ObjectPool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/ObjectPool.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.o
+.PHONY : src/cpp/core/ObjectPool.cpp.o
+
+src/cpp/core/ObjectPool.i: src/cpp/core/ObjectPool.cpp.i
+.PHONY : src/cpp/core/ObjectPool.i
+
+# target to preprocess a source file
+src/cpp/core/ObjectPool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/ObjectPool.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.i
+.PHONY : src/cpp/core/ObjectPool.cpp.i
+
+src/cpp/core/ObjectPool.s: src/cpp/core/ObjectPool.cpp.s
+.PHONY : src/cpp/core/ObjectPool.s
+
+# target to generate assembly for a file
+src/cpp/core/ObjectPool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/ObjectPool.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.s
+.PHONY : src/cpp/core/ObjectPool.cpp.s
+
+src/cpp/core/Order.o: src/cpp/core/Order.cpp.o
+.PHONY : src/cpp/core/Order.o
+
+# target to build an object file
+src/cpp/core/Order.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/Order.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.o
+.PHONY : src/cpp/core/Order.cpp.o
+
+src/cpp/core/Order.i: src/cpp/core/Order.cpp.i
+.PHONY : src/cpp/core/Order.i
+
+# target to preprocess a source file
+src/cpp/core/Order.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/Order.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.i
+.PHONY : src/cpp/core/Order.cpp.i
+
+src/cpp/core/Order.s: src/cpp/core/Order.cpp.s
+.PHONY : src/cpp/core/Order.s
+
+# target to generate assembly for a file
+src/cpp/core/Order.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/Order.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.s
+.PHONY : src/cpp/core/Order.cpp.s
 
 src/cpp/core/OrderBook.o: src/cpp/core/OrderBook.cpp.o
 .PHONY : src/cpp/core/OrderBook.o
 
 # target to build an object file
 src/cpp/core/OrderBook.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/core/OrderBook.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.o
 .PHONY : src/cpp/core/OrderBook.cpp.o
 
 src/cpp/core/OrderBook.i: src/cpp/core/OrderBook.cpp.i
@@ -142,7 +220,8 @@ src/cpp/core/OrderBook.i: src/cpp/core/OrderBook.cpp.i
 
 # target to preprocess a source file
 src/cpp/core/OrderBook.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/core/OrderBook.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.i
 .PHONY : src/cpp/core/OrderBook.cpp.i
 
 src/cpp/core/OrderBook.s: src/cpp/core/OrderBook.cpp.s
@@ -150,7 +229,8 @@ src/cpp/core/OrderBook.s: src/cpp/core/OrderBook.cpp.s
 
 # target to generate assembly for a file
 src/cpp/core/OrderBook.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/core/OrderBook.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.s
 .PHONY : src/cpp/core/OrderBook.cpp.s
 
 src/cpp/core/TradingEngine.o: src/cpp/core/TradingEngine.cpp.o
@@ -158,7 +238,8 @@ src/cpp/core/TradingEngine.o: src/cpp/core/TradingEngine.cpp.o
 
 # target to build an object file
 src/cpp/core/TradingEngine.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/core/TradingEngine.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.o
 .PHONY : src/cpp/core/TradingEngine.cpp.o
 
 src/cpp/core/TradingEngine.i: src/cpp/core/TradingEngine.cpp.i
@@ -166,7 +247,8 @@ src/cpp/core/TradingEngine.i: src/cpp/core/TradingEngine.cpp.i
 
 # target to preprocess a source file
 src/cpp/core/TradingEngine.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/core/TradingEngine.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.i
 .PHONY : src/cpp/core/TradingEngine.cpp.i
 
 src/cpp/core/TradingEngine.s: src/cpp/core/TradingEngine.cpp.s
@@ -174,7 +256,8 @@ src/cpp/core/TradingEngine.s: src/cpp/core/TradingEngine.cpp.s
 
 # target to generate assembly for a file
 src/cpp/core/TradingEngine.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/core/TradingEngine.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.s
 .PHONY : src/cpp/core/TradingEngine.cpp.s
 
 src/cpp/core/Utils.o: src/cpp/core/Utils.cpp.o
@@ -182,7 +265,8 @@ src/cpp/core/Utils.o: src/cpp/core/Utils.cpp.o
 
 # target to build an object file
 src/cpp/core/Utils.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/core/Utils.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/Utils.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.o
 .PHONY : src/cpp/core/Utils.cpp.o
 
 src/cpp/core/Utils.i: src/cpp/core/Utils.cpp.i
@@ -190,7 +274,8 @@ src/cpp/core/Utils.i: src/cpp/core/Utils.cpp.i
 
 # target to preprocess a source file
 src/cpp/core/Utils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/core/Utils.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/Utils.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.i
 .PHONY : src/cpp/core/Utils.cpp.i
 
 src/cpp/core/Utils.s: src/cpp/core/Utils.cpp.s
@@ -198,7 +283,8 @@ src/cpp/core/Utils.s: src/cpp/core/Utils.cpp.s
 
 # target to generate assembly for a file
 src/cpp/core/Utils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/core/Utils.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/Utils.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.s
 .PHONY : src/cpp/core/Utils.cpp.s
 
 src/cpp/data_feeds/MarketDataHandler.o: src/cpp/data_feeds/MarketDataHandler.cpp.o
@@ -206,7 +292,8 @@ src/cpp/data_feeds/MarketDataHandler.o: src/cpp/data_feeds/MarketDataHandler.cpp
 
 # target to build an object file
 src/cpp/data_feeds/MarketDataHandler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o
 .PHONY : src/cpp/data_feeds/MarketDataHandler.cpp.o
 
 src/cpp/data_feeds/MarketDataHandler.i: src/cpp/data_feeds/MarketDataHandler.cpp.i
@@ -214,7 +301,8 @@ src/cpp/data_feeds/MarketDataHandler.i: src/cpp/data_feeds/MarketDataHandler.cpp
 
 # target to preprocess a source file
 src/cpp/data_feeds/MarketDataHandler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/data_feeds/MarketDataHandler.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/data_feeds/MarketDataHandler.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.i
 .PHONY : src/cpp/data_feeds/MarketDataHandler.cpp.i
 
 src/cpp/data_feeds/MarketDataHandler.s: src/cpp/data_feeds/MarketDataHandler.cpp.s
@@ -222,7 +310,8 @@ src/cpp/data_feeds/MarketDataHandler.s: src/cpp/data_feeds/MarketDataHandler.cpp
 
 # target to generate assembly for a file
 src/cpp/data_feeds/MarketDataHandler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/data_feeds/MarketDataHandler.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/data_feeds/MarketDataHandler.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.s
 .PHONY : src/cpp/data_feeds/MarketDataHandler.cpp.s
 
 src/cpp/main.o: src/cpp/main.cpp.o
@@ -230,7 +319,8 @@ src/cpp/main.o: src/cpp/main.cpp.o
 
 # target to build an object file
 src/cpp/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/main.cpp.o
 .PHONY : src/cpp/main.cpp.o
 
 src/cpp/main.i: src/cpp/main.cpp.i
@@ -238,7 +328,8 @@ src/cpp/main.i: src/cpp/main.cpp.i
 
 # target to preprocess a source file
 src/cpp/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/main.cpp.i
 .PHONY : src/cpp/main.cpp.i
 
 src/cpp/main.s: src/cpp/main.cpp.s
@@ -246,7 +337,8 @@ src/cpp/main.s: src/cpp/main.cpp.s
 
 # target to generate assembly for a file
 src/cpp/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/main.cpp.s
 .PHONY : src/cpp/main.cpp.s
 
 src/cpp/server/APIServer.o: src/cpp/server/APIServer.cpp.o
@@ -254,7 +346,8 @@ src/cpp/server/APIServer.o: src/cpp/server/APIServer.cpp.o
 
 # target to build an object file
 src/cpp/server/APIServer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/server/APIServer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/server/APIServer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.o
 .PHONY : src/cpp/server/APIServer.cpp.o
 
 src/cpp/server/APIServer.i: src/cpp/server/APIServer.cpp.i
@@ -262,7 +355,8 @@ src/cpp/server/APIServer.i: src/cpp/server/APIServer.cpp.i
 
 # target to preprocess a source file
 src/cpp/server/APIServer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/server/APIServer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/server/APIServer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.i
 .PHONY : src/cpp/server/APIServer.cpp.i
 
 src/cpp/server/APIServer.s: src/cpp/server/APIServer.cpp.s
@@ -270,7 +364,8 @@ src/cpp/server/APIServer.s: src/cpp/server/APIServer.cpp.s
 
 # target to generate assembly for a file
 src/cpp/server/APIServer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/server/APIServer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/server/APIServer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.s
 .PHONY : src/cpp/server/APIServer.cpp.s
 
 src/cpp/server/Server.o: src/cpp/server/Server.cpp.o
@@ -278,7 +373,8 @@ src/cpp/server/Server.o: src/cpp/server/Server.cpp.o
 
 # target to build an object file
 src/cpp/server/Server.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/server/Server.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/server/Server.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.o
 .PHONY : src/cpp/server/Server.cpp.o
 
 src/cpp/server/Server.i: src/cpp/server/Server.cpp.i
@@ -286,7 +382,8 @@ src/cpp/server/Server.i: src/cpp/server/Server.cpp.i
 
 # target to preprocess a source file
 src/cpp/server/Server.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/server/Server.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/server/Server.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.i
 .PHONY : src/cpp/server/Server.cpp.i
 
 src/cpp/server/Server.s: src/cpp/server/Server.cpp.s
@@ -294,32 +391,108 @@ src/cpp/server/Server.s: src/cpp/server/Server.cpp.s
 
 # target to generate assembly for a file
 src/cpp/server/Server.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/server/Server.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/server/Server.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.s
 .PHONY : src/cpp/server/Server.cpp.s
 
-src/cpp/strategies/Trade.o: src/cpp/strategies/Trade.cpp.o
-.PHONY : src/cpp/strategies/Trade.o
+src/cpp/server/Session.o: src/cpp/server/Session.cpp.o
+.PHONY : src/cpp/server/Session.o
 
 # target to build an object file
-src/cpp/strategies/Trade.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/strategies/Trade.cpp.o
-.PHONY : src/cpp/strategies/Trade.cpp.o
+src/cpp/server/Session.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/server/Session.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.o
+.PHONY : src/cpp/server/Session.cpp.o
 
-src/cpp/strategies/Trade.i: src/cpp/strategies/Trade.cpp.i
-.PHONY : src/cpp/strategies/Trade.i
+src/cpp/server/Session.i: src/cpp/server/Session.cpp.i
+.PHONY : src/cpp/server/Session.i
 
 # target to preprocess a source file
-src/cpp/strategies/Trade.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/strategies/Trade.cpp.i
-.PHONY : src/cpp/strategies/Trade.cpp.i
+src/cpp/server/Session.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/server/Session.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.i
+.PHONY : src/cpp/server/Session.cpp.i
 
-src/cpp/strategies/Trade.s: src/cpp/strategies/Trade.cpp.s
-.PHONY : src/cpp/strategies/Trade.s
+src/cpp/server/Session.s: src/cpp/server/Session.cpp.s
+.PHONY : src/cpp/server/Session.s
 
 # target to generate assembly for a file
-src/cpp/strategies/Trade.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/trading-system.dir/build.make CMakeFiles/trading-system.dir/src/cpp/strategies/Trade.cpp.s
-.PHONY : src/cpp/strategies/Trade.cpp.s
+src/cpp/server/Session.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/server/Session.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.s
+.PHONY : src/cpp/server/Session.cpp.s
+
+tests/cpp/OrderBookTest.o: tests/cpp/OrderBookTest.cpp.o
+.PHONY : tests/cpp/OrderBookTest.o
+
+# target to build an object file
+tests/cpp/OrderBookTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.o
+.PHONY : tests/cpp/OrderBookTest.cpp.o
+
+tests/cpp/OrderBookTest.i: tests/cpp/OrderBookTest.cpp.i
+.PHONY : tests/cpp/OrderBookTest.i
+
+# target to preprocess a source file
+tests/cpp/OrderBookTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.i
+.PHONY : tests/cpp/OrderBookTest.cpp.i
+
+tests/cpp/OrderBookTest.s: tests/cpp/OrderBookTest.cpp.s
+.PHONY : tests/cpp/OrderBookTest.s
+
+# target to generate assembly for a file
+tests/cpp/OrderBookTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.s
+.PHONY : tests/cpp/OrderBookTest.cpp.s
+
+tests/cpp/OrderTest.o: tests/cpp/OrderTest.cpp.o
+.PHONY : tests/cpp/OrderTest.o
+
+# target to build an object file
+tests/cpp/OrderTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.o
+.PHONY : tests/cpp/OrderTest.cpp.o
+
+tests/cpp/OrderTest.i: tests/cpp/OrderTest.cpp.i
+.PHONY : tests/cpp/OrderTest.i
+
+# target to preprocess a source file
+tests/cpp/OrderTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.i
+.PHONY : tests/cpp/OrderTest.cpp.i
+
+tests/cpp/OrderTest.s: tests/cpp/OrderTest.cpp.s
+.PHONY : tests/cpp/OrderTest.s
+
+# target to generate assembly for a file
+tests/cpp/OrderTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.s
+.PHONY : tests/cpp/OrderTest.cpp.s
+
+tests/cpp/UtilsTest.o: tests/cpp/UtilsTest.cpp.o
+.PHONY : tests/cpp/UtilsTest.o
+
+# target to build an object file
+tests/cpp/UtilsTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.o
+.PHONY : tests/cpp/UtilsTest.cpp.o
+
+tests/cpp/UtilsTest.i: tests/cpp/UtilsTest.cpp.i
+.PHONY : tests/cpp/UtilsTest.i
+
+# target to preprocess a source file
+tests/cpp/UtilsTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.i
+.PHONY : tests/cpp/UtilsTest.cpp.i
+
+tests/cpp/UtilsTest.s: tests/cpp/UtilsTest.cpp.s
+.PHONY : tests/cpp/UtilsTest.s
+
+# target to generate assembly for a file
+tests/cpp/UtilsTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.s
+.PHONY : tests/cpp/UtilsTest.cpp.s
 
 # Help Target
 help:
@@ -329,7 +502,15 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... trading-system"
+	@echo "... test"
+	@echo "... Amtal"
+	@echo "... Tests"
+	@echo "... src/cpp/core/ObjectPool.o"
+	@echo "... src/cpp/core/ObjectPool.i"
+	@echo "... src/cpp/core/ObjectPool.s"
+	@echo "... src/cpp/core/Order.o"
+	@echo "... src/cpp/core/Order.i"
+	@echo "... src/cpp/core/Order.s"
 	@echo "... src/cpp/core/OrderBook.o"
 	@echo "... src/cpp/core/OrderBook.i"
 	@echo "... src/cpp/core/OrderBook.s"
@@ -351,9 +532,18 @@ help:
 	@echo "... src/cpp/server/Server.o"
 	@echo "... src/cpp/server/Server.i"
 	@echo "... src/cpp/server/Server.s"
-	@echo "... src/cpp/strategies/Trade.o"
-	@echo "... src/cpp/strategies/Trade.i"
-	@echo "... src/cpp/strategies/Trade.s"
+	@echo "... src/cpp/server/Session.o"
+	@echo "... src/cpp/server/Session.i"
+	@echo "... src/cpp/server/Session.s"
+	@echo "... tests/cpp/OrderBookTest.o"
+	@echo "... tests/cpp/OrderBookTest.i"
+	@echo "... tests/cpp/OrderBookTest.s"
+	@echo "... tests/cpp/OrderTest.o"
+	@echo "... tests/cpp/OrderTest.i"
+	@echo "... tests/cpp/OrderTest.s"
+	@echo "... tests/cpp/UtilsTest.o"
+	@echo "... tests/cpp/UtilsTest.i"
+	@echo "... tests/cpp/UtilsTest.s"
 .PHONY : help
 
 

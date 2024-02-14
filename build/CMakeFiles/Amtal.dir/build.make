@@ -69,47 +69,175 @@ include CMakeFiles/Amtal.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Amtal.dir/flags.make
 
-CMakeFiles/Amtal.dir/src/main.cpp.o: CMakeFiles/Amtal.dir/flags.make
-CMakeFiles/Amtal.dir/src/main.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/main.cpp
-CMakeFiles/Amtal.dir/src/main.cpp.o: CMakeFiles/Amtal.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Amtal.dir/src/main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Amtal.dir/src/main.cpp.o -MF CMakeFiles/Amtal.dir/src/main.cpp.o.d -o CMakeFiles/Amtal.dir/src/main.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/main.cpp
+CMakeFiles/Amtal.dir/src/cpp/core/ObjectPool.cpp.o: CMakeFiles/Amtal.dir/flags.make
+CMakeFiles/Amtal.dir/src/cpp/core/ObjectPool.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/ObjectPool.cpp
+CMakeFiles/Amtal.dir/src/cpp/core/ObjectPool.cpp.o: CMakeFiles/Amtal.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Amtal.dir/src/cpp/core/ObjectPool.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Amtal.dir/src/cpp/core/ObjectPool.cpp.o -MF CMakeFiles/Amtal.dir/src/cpp/core/ObjectPool.cpp.o.d -o CMakeFiles/Amtal.dir/src/cpp/core/ObjectPool.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/ObjectPool.cpp
 
-CMakeFiles/Amtal.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Amtal.dir/src/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/main.cpp > CMakeFiles/Amtal.dir/src/main.cpp.i
+CMakeFiles/Amtal.dir/src/cpp/core/ObjectPool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Amtal.dir/src/cpp/core/ObjectPool.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/ObjectPool.cpp > CMakeFiles/Amtal.dir/src/cpp/core/ObjectPool.cpp.i
 
-CMakeFiles/Amtal.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Amtal.dir/src/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/main.cpp -o CMakeFiles/Amtal.dir/src/main.cpp.s
+CMakeFiles/Amtal.dir/src/cpp/core/ObjectPool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Amtal.dir/src/cpp/core/ObjectPool.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/ObjectPool.cpp -o CMakeFiles/Amtal.dir/src/cpp/core/ObjectPool.cpp.s
 
-CMakeFiles/Amtal.dir/src/neural_network.cpp.o: CMakeFiles/Amtal.dir/flags.make
-CMakeFiles/Amtal.dir/src/neural_network.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/neural_network.cpp
-CMakeFiles/Amtal.dir/src/neural_network.cpp.o: CMakeFiles/Amtal.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Amtal.dir/src/neural_network.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Amtal.dir/src/neural_network.cpp.o -MF CMakeFiles/Amtal.dir/src/neural_network.cpp.o.d -o CMakeFiles/Amtal.dir/src/neural_network.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/neural_network.cpp
+CMakeFiles/Amtal.dir/src/cpp/core/Order.cpp.o: CMakeFiles/Amtal.dir/flags.make
+CMakeFiles/Amtal.dir/src/cpp/core/Order.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Order.cpp
+CMakeFiles/Amtal.dir/src/cpp/core/Order.cpp.o: CMakeFiles/Amtal.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Amtal.dir/src/cpp/core/Order.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Amtal.dir/src/cpp/core/Order.cpp.o -MF CMakeFiles/Amtal.dir/src/cpp/core/Order.cpp.o.d -o CMakeFiles/Amtal.dir/src/cpp/core/Order.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Order.cpp
 
-CMakeFiles/Amtal.dir/src/neural_network.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Amtal.dir/src/neural_network.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/neural_network.cpp > CMakeFiles/Amtal.dir/src/neural_network.cpp.i
+CMakeFiles/Amtal.dir/src/cpp/core/Order.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Amtal.dir/src/cpp/core/Order.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Order.cpp > CMakeFiles/Amtal.dir/src/cpp/core/Order.cpp.i
 
-CMakeFiles/Amtal.dir/src/neural_network.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Amtal.dir/src/neural_network.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/neural_network.cpp -o CMakeFiles/Amtal.dir/src/neural_network.cpp.s
+CMakeFiles/Amtal.dir/src/cpp/core/Order.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Amtal.dir/src/cpp/core/Order.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Order.cpp -o CMakeFiles/Amtal.dir/src/cpp/core/Order.cpp.s
+
+CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.o: CMakeFiles/Amtal.dir/flags.make
+CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/OrderBook.cpp
+CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.o: CMakeFiles/Amtal.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.o -MF CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.o.d -o CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/OrderBook.cpp
+
+CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/OrderBook.cpp > CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.i
+
+CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/OrderBook.cpp -o CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.s
+
+CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.o: CMakeFiles/Amtal.dir/flags.make
+CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/TradingEngine.cpp
+CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.o: CMakeFiles/Amtal.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.o -MF CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.o.d -o CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/TradingEngine.cpp
+
+CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/TradingEngine.cpp > CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.i
+
+CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/TradingEngine.cpp -o CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.s
+
+CMakeFiles/Amtal.dir/src/cpp/core/Utils.cpp.o: CMakeFiles/Amtal.dir/flags.make
+CMakeFiles/Amtal.dir/src/cpp/core/Utils.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Utils.cpp
+CMakeFiles/Amtal.dir/src/cpp/core/Utils.cpp.o: CMakeFiles/Amtal.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Amtal.dir/src/cpp/core/Utils.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Amtal.dir/src/cpp/core/Utils.cpp.o -MF CMakeFiles/Amtal.dir/src/cpp/core/Utils.cpp.o.d -o CMakeFiles/Amtal.dir/src/cpp/core/Utils.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Utils.cpp
+
+CMakeFiles/Amtal.dir/src/cpp/core/Utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Amtal.dir/src/cpp/core/Utils.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Utils.cpp > CMakeFiles/Amtal.dir/src/cpp/core/Utils.cpp.i
+
+CMakeFiles/Amtal.dir/src/cpp/core/Utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Amtal.dir/src/cpp/core/Utils.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Utils.cpp -o CMakeFiles/Amtal.dir/src/cpp/core/Utils.cpp.s
+
+CMakeFiles/Amtal.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o: CMakeFiles/Amtal.dir/flags.make
+CMakeFiles/Amtal.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/data_feeds/MarketDataHandler.cpp
+CMakeFiles/Amtal.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o: CMakeFiles/Amtal.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Amtal.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Amtal.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o -MF CMakeFiles/Amtal.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o.d -o CMakeFiles/Amtal.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/data_feeds/MarketDataHandler.cpp
+
+CMakeFiles/Amtal.dir/src/cpp/data_feeds/MarketDataHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Amtal.dir/src/cpp/data_feeds/MarketDataHandler.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/data_feeds/MarketDataHandler.cpp > CMakeFiles/Amtal.dir/src/cpp/data_feeds/MarketDataHandler.cpp.i
+
+CMakeFiles/Amtal.dir/src/cpp/data_feeds/MarketDataHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Amtal.dir/src/cpp/data_feeds/MarketDataHandler.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/data_feeds/MarketDataHandler.cpp -o CMakeFiles/Amtal.dir/src/cpp/data_feeds/MarketDataHandler.cpp.s
+
+CMakeFiles/Amtal.dir/src/cpp/main.cpp.o: CMakeFiles/Amtal.dir/flags.make
+CMakeFiles/Amtal.dir/src/cpp/main.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/main.cpp
+CMakeFiles/Amtal.dir/src/cpp/main.cpp.o: CMakeFiles/Amtal.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Amtal.dir/src/cpp/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Amtal.dir/src/cpp/main.cpp.o -MF CMakeFiles/Amtal.dir/src/cpp/main.cpp.o.d -o CMakeFiles/Amtal.dir/src/cpp/main.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/main.cpp
+
+CMakeFiles/Amtal.dir/src/cpp/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Amtal.dir/src/cpp/main.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/main.cpp > CMakeFiles/Amtal.dir/src/cpp/main.cpp.i
+
+CMakeFiles/Amtal.dir/src/cpp/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Amtal.dir/src/cpp/main.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/main.cpp -o CMakeFiles/Amtal.dir/src/cpp/main.cpp.s
+
+CMakeFiles/Amtal.dir/src/cpp/server/APIServer.cpp.o: CMakeFiles/Amtal.dir/flags.make
+CMakeFiles/Amtal.dir/src/cpp/server/APIServer.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/APIServer.cpp
+CMakeFiles/Amtal.dir/src/cpp/server/APIServer.cpp.o: CMakeFiles/Amtal.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Amtal.dir/src/cpp/server/APIServer.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Amtal.dir/src/cpp/server/APIServer.cpp.o -MF CMakeFiles/Amtal.dir/src/cpp/server/APIServer.cpp.o.d -o CMakeFiles/Amtal.dir/src/cpp/server/APIServer.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/APIServer.cpp
+
+CMakeFiles/Amtal.dir/src/cpp/server/APIServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Amtal.dir/src/cpp/server/APIServer.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/APIServer.cpp > CMakeFiles/Amtal.dir/src/cpp/server/APIServer.cpp.i
+
+CMakeFiles/Amtal.dir/src/cpp/server/APIServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Amtal.dir/src/cpp/server/APIServer.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/APIServer.cpp -o CMakeFiles/Amtal.dir/src/cpp/server/APIServer.cpp.s
+
+CMakeFiles/Amtal.dir/src/cpp/server/Server.cpp.o: CMakeFiles/Amtal.dir/flags.make
+CMakeFiles/Amtal.dir/src/cpp/server/Server.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Server.cpp
+CMakeFiles/Amtal.dir/src/cpp/server/Server.cpp.o: CMakeFiles/Amtal.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Amtal.dir/src/cpp/server/Server.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Amtal.dir/src/cpp/server/Server.cpp.o -MF CMakeFiles/Amtal.dir/src/cpp/server/Server.cpp.o.d -o CMakeFiles/Amtal.dir/src/cpp/server/Server.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Server.cpp
+
+CMakeFiles/Amtal.dir/src/cpp/server/Server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Amtal.dir/src/cpp/server/Server.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Server.cpp > CMakeFiles/Amtal.dir/src/cpp/server/Server.cpp.i
+
+CMakeFiles/Amtal.dir/src/cpp/server/Server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Amtal.dir/src/cpp/server/Server.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Server.cpp -o CMakeFiles/Amtal.dir/src/cpp/server/Server.cpp.s
+
+CMakeFiles/Amtal.dir/src/cpp/server/Session.cpp.o: CMakeFiles/Amtal.dir/flags.make
+CMakeFiles/Amtal.dir/src/cpp/server/Session.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Session.cpp
+CMakeFiles/Amtal.dir/src/cpp/server/Session.cpp.o: CMakeFiles/Amtal.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Amtal.dir/src/cpp/server/Session.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Amtal.dir/src/cpp/server/Session.cpp.o -MF CMakeFiles/Amtal.dir/src/cpp/server/Session.cpp.o.d -o CMakeFiles/Amtal.dir/src/cpp/server/Session.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Session.cpp
+
+CMakeFiles/Amtal.dir/src/cpp/server/Session.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Amtal.dir/src/cpp/server/Session.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Session.cpp > CMakeFiles/Amtal.dir/src/cpp/server/Session.cpp.i
+
+CMakeFiles/Amtal.dir/src/cpp/server/Session.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Amtal.dir/src/cpp/server/Session.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Session.cpp -o CMakeFiles/Amtal.dir/src/cpp/server/Session.cpp.s
 
 # Object files for target Amtal
 Amtal_OBJECTS = \
-"CMakeFiles/Amtal.dir/src/main.cpp.o" \
-"CMakeFiles/Amtal.dir/src/neural_network.cpp.o"
+"CMakeFiles/Amtal.dir/src/cpp/core/ObjectPool.cpp.o" \
+"CMakeFiles/Amtal.dir/src/cpp/core/Order.cpp.o" \
+"CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.o" \
+"CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.o" \
+"CMakeFiles/Amtal.dir/src/cpp/core/Utils.cpp.o" \
+"CMakeFiles/Amtal.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o" \
+"CMakeFiles/Amtal.dir/src/cpp/main.cpp.o" \
+"CMakeFiles/Amtal.dir/src/cpp/server/APIServer.cpp.o" \
+"CMakeFiles/Amtal.dir/src/cpp/server/Server.cpp.o" \
+"CMakeFiles/Amtal.dir/src/cpp/server/Session.cpp.o"
 
 # External object files for target Amtal
 Amtal_EXTERNAL_OBJECTS =
 
-Amtal: CMakeFiles/Amtal.dir/src/main.cpp.o
-Amtal: CMakeFiles/Amtal.dir/src/neural_network.cpp.o
+Amtal: CMakeFiles/Amtal.dir/src/cpp/core/ObjectPool.cpp.o
+Amtal: CMakeFiles/Amtal.dir/src/cpp/core/Order.cpp.o
+Amtal: CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.o
+Amtal: CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.o
+Amtal: CMakeFiles/Amtal.dir/src/cpp/core/Utils.cpp.o
+Amtal: CMakeFiles/Amtal.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o
+Amtal: CMakeFiles/Amtal.dir/src/cpp/main.cpp.o
+Amtal: CMakeFiles/Amtal.dir/src/cpp/server/APIServer.cpp.o
+Amtal: CMakeFiles/Amtal.dir/src/cpp/server/Server.cpp.o
+Amtal: CMakeFiles/Amtal.dir/src/cpp/server/Session.cpp.o
 Amtal: CMakeFiles/Amtal.dir/build.make
 Amtal: CMakeFiles/Amtal.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Amtal"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable Amtal"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Amtal.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
