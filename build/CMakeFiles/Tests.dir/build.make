@@ -73,193 +73,193 @@ CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.o: CMakeFiles/Tests.dir/flags.m
 CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/OrderBookTest.cpp
 CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.o: CMakeFiles/Tests.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.o -MF CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.o.d -o CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/OrderBookTest.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.o -MF CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.o.d -o CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/OrderBookTest.cpp
 
 CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/OrderBookTest.cpp > CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/OrderBookTest.cpp > CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.i
 
 CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/OrderBookTest.cpp -o CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/OrderBookTest.cpp -o CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.s
 
 CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.o: CMakeFiles/Tests.dir/flags.make
 CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/OrderTest.cpp
 CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.o: CMakeFiles/Tests.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.o -MF CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.o.d -o CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/OrderTest.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.o -MF CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.o.d -o CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/OrderTest.cpp
 
 CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/OrderTest.cpp > CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/OrderTest.cpp > CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.i
 
 CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/OrderTest.cpp -o CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/OrderTest.cpp -o CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.s
 
 CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.o: CMakeFiles/Tests.dir/flags.make
 CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/UtilsTest.cpp
 CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.o: CMakeFiles/Tests.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.o -MF CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.o.d -o CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/UtilsTest.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.o -MF CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.o.d -o CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/UtilsTest.cpp
 
 CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/UtilsTest.cpp > CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/UtilsTest.cpp > CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.i
 
 CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/UtilsTest.cpp -o CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/tests/cpp/UtilsTest.cpp -o CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.s
+
+CMakeFiles/Tests.dir/src/cpp/core/FeedHandler.cpp.o: CMakeFiles/Tests.dir/flags.make
+CMakeFiles/Tests.dir/src/cpp/core/FeedHandler.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/FeedHandler.cpp
+CMakeFiles/Tests.dir/src/cpp/core/FeedHandler.cpp.o: CMakeFiles/Tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Tests.dir/src/cpp/core/FeedHandler.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/src/cpp/core/FeedHandler.cpp.o -MF CMakeFiles/Tests.dir/src/cpp/core/FeedHandler.cpp.o.d -o CMakeFiles/Tests.dir/src/cpp/core/FeedHandler.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/FeedHandler.cpp
+
+CMakeFiles/Tests.dir/src/cpp/core/FeedHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Tests.dir/src/cpp/core/FeedHandler.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/FeedHandler.cpp > CMakeFiles/Tests.dir/src/cpp/core/FeedHandler.cpp.i
+
+CMakeFiles/Tests.dir/src/cpp/core/FeedHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Tests.dir/src/cpp/core/FeedHandler.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/FeedHandler.cpp -o CMakeFiles/Tests.dir/src/cpp/core/FeedHandler.cpp.s
 
 CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.o: CMakeFiles/Tests.dir/flags.make
 CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/ObjectPool.cpp
 CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.o: CMakeFiles/Tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.o -MF CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.o.d -o CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/ObjectPool.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.o -MF CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.o.d -o CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/ObjectPool.cpp
 
 CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/ObjectPool.cpp > CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/ObjectPool.cpp > CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.i
 
 CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/ObjectPool.cpp -o CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/ObjectPool.cpp -o CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.s
 
 CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.o: CMakeFiles/Tests.dir/flags.make
 CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Order.cpp
 CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.o: CMakeFiles/Tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.o -MF CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.o.d -o CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Order.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.o -MF CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.o.d -o CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Order.cpp
 
 CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Order.cpp > CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Order.cpp > CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.i
 
 CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Order.cpp -o CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Order.cpp -o CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.s
 
 CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.o: CMakeFiles/Tests.dir/flags.make
 CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/OrderBook.cpp
 CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.o: CMakeFiles/Tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.o -MF CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.o.d -o CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/OrderBook.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.o -MF CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.o.d -o CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/OrderBook.cpp
 
 CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/OrderBook.cpp > CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/OrderBook.cpp > CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.i
 
 CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/OrderBook.cpp -o CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.s
-
-CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.o: CMakeFiles/Tests.dir/flags.make
-CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/TradingEngine.cpp
-CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.o: CMakeFiles/Tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.o -MF CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.o.d -o CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/TradingEngine.cpp
-
-CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/TradingEngine.cpp > CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.i
-
-CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/TradingEngine.cpp -o CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/OrderBook.cpp -o CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.s
 
 CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.o: CMakeFiles/Tests.dir/flags.make
 CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Utils.cpp
 CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.o: CMakeFiles/Tests.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.o -MF CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.o.d -o CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Utils.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.o -MF CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.o.d -o CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Utils.cpp
 
 CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Utils.cpp > CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Utils.cpp > CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.i
 
 CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Utils.cpp -o CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/core/Utils.cpp -o CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.s
 
 CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o: CMakeFiles/Tests.dir/flags.make
 CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/data_feeds/MarketDataHandler.cpp
 CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o: CMakeFiles/Tests.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o -MF CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o.d -o CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/data_feeds/MarketDataHandler.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o -MF CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o.d -o CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/data_feeds/MarketDataHandler.cpp
 
 CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/data_feeds/MarketDataHandler.cpp > CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/data_feeds/MarketDataHandler.cpp > CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.i
 
 CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/data_feeds/MarketDataHandler.cpp -o CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/data_feeds/MarketDataHandler.cpp -o CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.s
 
 CMakeFiles/Tests.dir/src/cpp/main.cpp.o: CMakeFiles/Tests.dir/flags.make
 CMakeFiles/Tests.dir/src/cpp/main.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/main.cpp
 CMakeFiles/Tests.dir/src/cpp/main.cpp.o: CMakeFiles/Tests.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Tests.dir/src/cpp/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/src/cpp/main.cpp.o -MF CMakeFiles/Tests.dir/src/cpp/main.cpp.o.d -o CMakeFiles/Tests.dir/src/cpp/main.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/main.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/src/cpp/main.cpp.o -MF CMakeFiles/Tests.dir/src/cpp/main.cpp.o.d -o CMakeFiles/Tests.dir/src/cpp/main.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/main.cpp
 
 CMakeFiles/Tests.dir/src/cpp/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Tests.dir/src/cpp/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/main.cpp > CMakeFiles/Tests.dir/src/cpp/main.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/main.cpp > CMakeFiles/Tests.dir/src/cpp/main.cpp.i
 
 CMakeFiles/Tests.dir/src/cpp/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Tests.dir/src/cpp/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/main.cpp -o CMakeFiles/Tests.dir/src/cpp/main.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/main.cpp -o CMakeFiles/Tests.dir/src/cpp/main.cpp.s
 
 CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.o: CMakeFiles/Tests.dir/flags.make
 CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/APIServer.cpp
 CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.o: CMakeFiles/Tests.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.o -MF CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.o.d -o CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/APIServer.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.o -MF CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.o.d -o CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/APIServer.cpp
 
 CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/APIServer.cpp > CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/APIServer.cpp > CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.i
 
 CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/APIServer.cpp -o CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/APIServer.cpp -o CMakeFiles/Tests.dir/src/cpp/server/APIServer.cpp.s
 
 CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.o: CMakeFiles/Tests.dir/flags.make
 CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Server.cpp
 CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.o: CMakeFiles/Tests.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.o -MF CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.o.d -o CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Server.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.o -MF CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.o.d -o CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Server.cpp
 
 CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Server.cpp > CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Server.cpp > CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.i
 
 CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Server.cpp -o CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Server.cpp -o CMakeFiles/Tests.dir/src/cpp/server/Server.cpp.s
 
 CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.o: CMakeFiles/Tests.dir/flags.make
 CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.o: /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Session.cpp
 CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.o: CMakeFiles/Tests.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Desktop/projects/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.o -MF CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.o.d -o CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Session.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.o -MF CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.o.d -o CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.o -c /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Session.cpp
 
 CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Session.cpp > CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Session.cpp > CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.i
 
 CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Session.cpp -o CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Desktop/projects/Amtal0/src/cpp/server/Session.cpp -o CMakeFiles/Tests.dir/src/cpp/server/Session.cpp.s
 
 # Object files for target Tests
 Tests_OBJECTS = \
 "CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.o" \
 "CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.o" \
 "CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.o" \
+"CMakeFiles/Tests.dir/src/cpp/core/FeedHandler.cpp.o" \
 "CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.o" \
 "CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.o" \
 "CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.o" \
-"CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.o" \
 "CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.o" \
 "CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o" \
 "CMakeFiles/Tests.dir/src/cpp/main.cpp.o" \
@@ -273,10 +273,10 @@ Tests_EXTERNAL_OBJECTS =
 Tests: CMakeFiles/Tests.dir/tests/cpp/OrderBookTest.cpp.o
 Tests: CMakeFiles/Tests.dir/tests/cpp/OrderTest.cpp.o
 Tests: CMakeFiles/Tests.dir/tests/cpp/UtilsTest.cpp.o
+Tests: CMakeFiles/Tests.dir/src/cpp/core/FeedHandler.cpp.o
 Tests: CMakeFiles/Tests.dir/src/cpp/core/ObjectPool.cpp.o
 Tests: CMakeFiles/Tests.dir/src/cpp/core/Order.cpp.o
 Tests: CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.o
-Tests: CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.o
 Tests: CMakeFiles/Tests.dir/src/cpp/core/Utils.cpp.o
 Tests: CMakeFiles/Tests.dir/src/cpp/data_feeds/MarketDataHandler.cpp.o
 Tests: CMakeFiles/Tests.dir/src/cpp/main.cpp.o

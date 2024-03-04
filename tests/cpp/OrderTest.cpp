@@ -26,5 +26,9 @@ class OrderTest : public ::testing::Test {
 TEST_F(OrderTest, ConstructorTest) {
   
 }
+
+TEST_F(OrderTest, ID_Setter) {
+
+}
   
 }

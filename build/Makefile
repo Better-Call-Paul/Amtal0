@@ -152,6 +152,33 @@ Tests/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/build
 .PHONY : Tests/fast
 
+src/cpp/core/FeedHandler.o: src/cpp/core/FeedHandler.cpp.o
+.PHONY : src/cpp/core/FeedHandler.o
+
+# target to build an object file
+src/cpp/core/FeedHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/FeedHandler.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/FeedHandler.cpp.o
+.PHONY : src/cpp/core/FeedHandler.cpp.o
+
+src/cpp/core/FeedHandler.i: src/cpp/core/FeedHandler.cpp.i
+.PHONY : src/cpp/core/FeedHandler.i
+
+# target to preprocess a source file
+src/cpp/core/FeedHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/FeedHandler.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/FeedHandler.cpp.i
+.PHONY : src/cpp/core/FeedHandler.cpp.i
+
+src/cpp/core/FeedHandler.s: src/cpp/core/FeedHandler.cpp.s
+.PHONY : src/cpp/core/FeedHandler.s
+
+# target to generate assembly for a file
+src/cpp/core/FeedHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/FeedHandler.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/FeedHandler.cpp.s
+.PHONY : src/cpp/core/FeedHandler.cpp.s
+
 src/cpp/core/ObjectPool.o: src/cpp/core/ObjectPool.cpp.o
 .PHONY : src/cpp/core/ObjectPool.o
 
@@ -232,33 +259,6 @@ src/cpp/core/OrderBook.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/OrderBook.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/OrderBook.cpp.s
 .PHONY : src/cpp/core/OrderBook.cpp.s
-
-src/cpp/core/TradingEngine.o: src/cpp/core/TradingEngine.cpp.o
-.PHONY : src/cpp/core/TradingEngine.o
-
-# target to build an object file
-src/cpp/core/TradingEngine.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.o
-.PHONY : src/cpp/core/TradingEngine.cpp.o
-
-src/cpp/core/TradingEngine.i: src/cpp/core/TradingEngine.cpp.i
-.PHONY : src/cpp/core/TradingEngine.i
-
-# target to preprocess a source file
-src/cpp/core/TradingEngine.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.i
-.PHONY : src/cpp/core/TradingEngine.cpp.i
-
-src/cpp/core/TradingEngine.s: src/cpp/core/TradingEngine.cpp.s
-.PHONY : src/cpp/core/TradingEngine.s
-
-# target to generate assembly for a file
-src/cpp/core/TradingEngine.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/cpp/core/TradingEngine.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/src/cpp/core/TradingEngine.cpp.s
-.PHONY : src/cpp/core/TradingEngine.cpp.s
 
 src/cpp/core/Utils.o: src/cpp/core/Utils.cpp.o
 .PHONY : src/cpp/core/Utils.o
@@ -505,6 +505,9 @@ help:
 	@echo "... test"
 	@echo "... Amtal"
 	@echo "... Tests"
+	@echo "... src/cpp/core/FeedHandler.o"
+	@echo "... src/cpp/core/FeedHandler.i"
+	@echo "... src/cpp/core/FeedHandler.s"
 	@echo "... src/cpp/core/ObjectPool.o"
 	@echo "... src/cpp/core/ObjectPool.i"
 	@echo "... src/cpp/core/ObjectPool.s"
@@ -514,9 +517,6 @@ help:
 	@echo "... src/cpp/core/OrderBook.o"
 	@echo "... src/cpp/core/OrderBook.i"
 	@echo "... src/cpp/core/OrderBook.s"
-	@echo "... src/cpp/core/TradingEngine.o"
-	@echo "... src/cpp/core/TradingEngine.i"
-	@echo "... src/cpp/core/TradingEngine.s"
 	@echo "... src/cpp/core/Utils.o"
 	@echo "... src/cpp/core/Utils.i"
 	@echo "... src/cpp/core/Utils.s"

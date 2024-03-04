@@ -1,0 +1,5 @@
+/Users/paulchan/Desktop/projects/Amtal0/CMakeFiles/Amtal.dir
+/Users/paulchan/Desktop/projects/Amtal0/CMakeFiles/Tests.dir
+/Users/paulchan/Desktop/projects/Amtal0/CMakeFiles/test.dir
+/Users/paulchan/Desktop/projects/Amtal0/CMakeFiles/edit_cache.dir
+/Users/paulchan/Desktop/projects/Amtal0/CMakeFiles/rebuild_cache.dir

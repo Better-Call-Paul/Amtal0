@@ -1,7 +1,6 @@
 #ifndef RUNNING_TESTS
 
 #include "core/OrderBook.h"
-#include "core/TradingEngine.h"
 #include "core/Utils.h"
 
 #include "server/Session.h"

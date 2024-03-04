@@ -11,9 +11,7 @@ namespace Amtal {
       SellSide.resize(max_range);
   }
 
-  OrderBook::~OrderBook() {
-
-  }
+  OrderBook::~OrderBook() {}
 
   void OrderBook::add_order(const Order& order) {
     std::unique_lock lock(book_mutex);
@@ -24,7 +22,8 @@ namespace Amtal {
     Book[index].push_back(order);
     volume_map[index] += order.get_volume();
   }
-
+  
+  
   void OrderBook::cancel_order(double price, const int orderId, const OrderType side) {
     // have to get side and volume
     std::unique_lock lock(book_mutex);
@@ -65,4 +64,4 @@ namespace Amtal {
     return BuySide.empty() && SellSide.empty() && buy_volume_map.empty() && sell_volume_map.empty();
   }
 
-}
+} // namespace Amtal

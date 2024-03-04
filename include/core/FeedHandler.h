@@ -1,5 +1,5 @@
-#ifndef TRADINGENGINE_H
-#define TRADINGENGINE_H
+#ifndef FEEDHANDLER_H
+#define FEEDHANDLER_H
 
 namespace Amtal {
 
