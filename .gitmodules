@@ -1,0 +1,6 @@
+[submodule "build/external/json"]
+	path = build/external/json
+	url = https://github.com/nlohmann/json.git
+[submodule "build/external/httplib"]
+	path = build/external/httplib
+	url = https://github.com/yhirose/cpp-httplib.git
