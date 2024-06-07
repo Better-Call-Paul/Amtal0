@@ -41,43 +41,43 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /Users/paulchan/Documents/GitHub/Amtal0/build/
 # =============================================================================
-# Object build statements for EXECUTABLE target amtal
+# Object build statements for EXECUTABLE target Amtal
 
 
 #############################################
-# Order-only phony target for amtal
+# Order-only phony target for Amtal
 
-build cmake_object_order_depends_target_amtal: phony || .
+build cmake_object_order_depends_target_Amtal: phony || .
 
-build CMakeFiles/amtal.dir/src/main.cpp.o: CXX_COMPILER__amtal_unscanned_Debug /Users/paulchan/Documents/GitHub/Amtal0/src/main.cpp || cmake_object_order_depends_target_amtal
-  DEP_FILE = CMakeFiles/amtal.dir/src/main.cpp.o.d
-  FLAGS = -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -Wall -Wextra -pedantic
+build CMakeFiles/Amtal.dir/src/main.cpp.o: CXX_COMPILER__Amtal_unscanned_Debug /Users/paulchan/Documents/GitHub/Amtal0/src/main.cpp || cmake_object_order_depends_target_Amtal
+  DEP_FILE = CMakeFiles/Amtal.dir/src/main.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -Wall -Wextra -pedantic
   INCLUDES = -I/Users/paulchan/Documents/GitHub/Amtal0/include
-  OBJECT_DIR = CMakeFiles/amtal.dir
-  OBJECT_FILE_DIR = CMakeFiles/amtal.dir/src
+  OBJECT_DIR = CMakeFiles/Amtal.dir
+  OBJECT_FILE_DIR = CMakeFiles/Amtal.dir/src
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target amtal
+# Link build statements for EXECUTABLE target Amtal
 
 
 #############################################
-# Link the executable amtal
+# Link the executable Amtal
 
-build amtal: CXX_EXECUTABLE_LINKER__amtal_Debug CMakeFiles/amtal.dir/src/main.cpp.o
+build Amtal: CXX_EXECUTABLE_LINKER__Amtal_Debug CMakeFiles/Amtal.dir/src/main.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1
-  OBJECT_DIR = CMakeFiles/amtal.dir
+  OBJECT_DIR = CMakeFiles/Amtal.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = amtal
-  TARGET_PDB = amtal.dbg
+  TARGET_FILE = Amtal
+  TARGET_PDB = Amtal.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/paulchan/Documents/GitHub/Amtal0/build && /Applications/CMake.app/Contents/bin/ccmake -S/Users/paulchan/Documents/GitHub/Amtal0 -B/Users/paulchan/Documents/GitHub/Amtal0/build
+  COMMAND = cd /Users/paulchan/Documents/GitHub/Amtal0/build && /opt/homebrew/Caskroom/miniconda/base/lib/python3.12/site-packages/cmake/data/bin/ccmake -S/Users/paulchan/Documents/GitHub/Amtal0 -B/Users/paulchan/Documents/GitHub/Amtal0/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -107,7 +107,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/paulchan/Documents/GitHub/Amtal0/build
 
-build all: phony amtal
+build all: phony Amtal
 
 # =============================================================================
 # Built-in targets

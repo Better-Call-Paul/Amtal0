@@ -1,0 +1,11 @@
+file(REMOVE_RECURSE
+  "Amtal"
+  "Amtal.pdb"
+  "CMakeFiles/Amtal.dir/src/main.cc.o"
+  "CMakeFiles/Amtal.dir/src/main.cc.o.d"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/Amtal.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

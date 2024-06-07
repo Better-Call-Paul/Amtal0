@@ -1,8 +1,8 @@
 [
 {
   "directory": "/Users/paulchan/Documents/GitHub/Amtal0/build",
-  "command": "/usr/bin/clang++ -I/Users/paulchan/Documents/GitHub/Amtal0/include -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -Wall -Wextra -pedantic -o CMakeFiles/amtal.dir/src/main.cpp.o -c /Users/paulchan/Documents/GitHub/Amtal0/src/main.cpp",
+  "command": "/usr/bin/clang++ -I/Users/paulchan/Documents/GitHub/Amtal0/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -Wall -Wextra -pedantic -o CMakeFiles/Amtal.dir/src/main.cpp.o -c /Users/paulchan/Documents/GitHub/Amtal0/src/main.cpp",
   "file": "/Users/paulchan/Documents/GitHub/Amtal0/src/main.cpp",
-  "output": "CMakeFiles/amtal.dir/src/main.cpp.o"
+  "output": "CMakeFiles/Amtal.dir/src/main.cpp.o"
 }
 ]

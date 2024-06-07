@@ -1,0 +1,14 @@
+# Target labels
+ databento-populate
+# Source files and their labels
+/Users/paulchan/Documents/GitHub/Amtal0/build/_deps/databento-subbuild/CMakeFiles/databento-populate
+/Users/paulchan/Documents/GitHub/Amtal0/build/_deps/databento-subbuild/CMakeFiles/databento-populate.rule
+/Users/paulchan/Documents/GitHub/Amtal0/build/_deps/databento-subbuild/CMakeFiles/databento-populate-complete.rule
+/Users/paulchan/Documents/GitHub/Amtal0/build/_deps/databento-subbuild/databento-populate-prefix/src/databento-populate-stamp/databento-populate-build.rule
+/Users/paulchan/Documents/GitHub/Amtal0/build/_deps/databento-subbuild/databento-populate-prefix/src/databento-populate-stamp/databento-populate-configure.rule
+/Users/paulchan/Documents/GitHub/Amtal0/build/_deps/databento-subbuild/databento-populate-prefix/src/databento-populate-stamp/databento-populate-download.rule
+/Users/paulchan/Documents/GitHub/Amtal0/build/_deps/databento-subbuild/databento-populate-prefix/src/databento-populate-stamp/databento-populate-install.rule
+/Users/paulchan/Documents/GitHub/Amtal0/build/_deps/databento-subbuild/databento-populate-prefix/src/databento-populate-stamp/databento-populate-mkdir.rule
+/Users/paulchan/Documents/GitHub/Amtal0/build/_deps/databento-subbuild/databento-populate-prefix/src/databento-populate-stamp/databento-populate-patch.rule
+/Users/paulchan/Documents/GitHub/Amtal0/build/_deps/databento-subbuild/databento-populate-prefix/src/databento-populate-stamp/databento-populate-test.rule
+/Users/paulchan/Documents/GitHub/Amtal0/build/_deps/databento-subbuild/databento-populate-prefix/src/databento-populate-stamp/databento-populate-update.rule

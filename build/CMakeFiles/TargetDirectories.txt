@@ -1,3 +1,3 @@
-/Users/paulchan/Documents/GitHub/Amtal0/build/CMakeFiles/amtal.dir
+/Users/paulchan/Documents/GitHub/Amtal0/build/CMakeFiles/Amtal.dir
 /Users/paulchan/Documents/GitHub/Amtal0/build/CMakeFiles/edit_cache.dir
 /Users/paulchan/Documents/GitHub/Amtal0/build/CMakeFiles/rebuild_cache.dir
