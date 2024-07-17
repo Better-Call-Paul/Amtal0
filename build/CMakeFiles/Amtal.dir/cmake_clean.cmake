@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "Amtal"
   "Amtal.pdb"
-  "CMakeFiles/Amtal.dir/src/main.cc.o"
-  "CMakeFiles/Amtal.dir/src/main.cc.o.d"
+  "CMakeFiles/Amtal.dir/src/main.cpp.o"
+  "CMakeFiles/Amtal.dir/src/main.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

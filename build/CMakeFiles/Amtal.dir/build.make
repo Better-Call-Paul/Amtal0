@@ -69,28 +69,28 @@ include CMakeFiles/Amtal.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Amtal.dir/flags.make
 
-CMakeFiles/Amtal.dir/src/main.cc.o: CMakeFiles/Amtal.dir/flags.make
-CMakeFiles/Amtal.dir/src/main.cc.o: /Users/paulchan/Documents/GitHub/Amtal0/src/main.cc
-CMakeFiles/Amtal.dir/src/main.cc.o: CMakeFiles/Amtal.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Documents/GitHub/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Amtal.dir/src/main.cc.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Amtal.dir/src/main.cc.o -MF CMakeFiles/Amtal.dir/src/main.cc.o.d -o CMakeFiles/Amtal.dir/src/main.cc.o -c /Users/paulchan/Documents/GitHub/Amtal0/src/main.cc
+CMakeFiles/Amtal.dir/src/main.cpp.o: CMakeFiles/Amtal.dir/flags.make
+CMakeFiles/Amtal.dir/src/main.cpp.o: /Users/paulchan/Documents/GitHub/Amtal0/src/main.cpp
+CMakeFiles/Amtal.dir/src/main.cpp.o: CMakeFiles/Amtal.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Documents/GitHub/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Amtal.dir/src/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Amtal.dir/src/main.cpp.o -MF CMakeFiles/Amtal.dir/src/main.cpp.o.d -o CMakeFiles/Amtal.dir/src/main.cpp.o -c /Users/paulchan/Documents/GitHub/Amtal0/src/main.cpp
 
-CMakeFiles/Amtal.dir/src/main.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Amtal.dir/src/main.cc.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Documents/GitHub/Amtal0/src/main.cc > CMakeFiles/Amtal.dir/src/main.cc.i
+CMakeFiles/Amtal.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Amtal.dir/src/main.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Documents/GitHub/Amtal0/src/main.cpp > CMakeFiles/Amtal.dir/src/main.cpp.i
 
-CMakeFiles/Amtal.dir/src/main.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Amtal.dir/src/main.cc.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Documents/GitHub/Amtal0/src/main.cc -o CMakeFiles/Amtal.dir/src/main.cc.s
+CMakeFiles/Amtal.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Amtal.dir/src/main.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Documents/GitHub/Amtal0/src/main.cpp -o CMakeFiles/Amtal.dir/src/main.cpp.s
 
 # Object files for target Amtal
 Amtal_OBJECTS = \
-"CMakeFiles/Amtal.dir/src/main.cc.o"
+"CMakeFiles/Amtal.dir/src/main.cpp.o"
 
 # External object files for target Amtal
 Amtal_EXTERNAL_OBJECTS =
 
-Amtal: CMakeFiles/Amtal.dir/src/main.cc.o
+Amtal: CMakeFiles/Amtal.dir/src/main.cpp.o
 Amtal: CMakeFiles/Amtal.dir/build.make
 Amtal: CMakeFiles/Amtal.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/paulchan/Documents/GitHub/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Amtal"
