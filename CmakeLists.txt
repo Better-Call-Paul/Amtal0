@@ -9,6 +9,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_compile_options(-Wall -Wextra -pedantic)
 
 
-include_directories(include)
+include_directories(include)  
+set(BOOST_ROOT "/opt/homebrew/Cellar/boost/1.85.0")
+find_package(Boost 1.85.0 REQUIRED)
+include_directories(${Boost_INCLUDE_DIRS})
 
-add_executable(${PROJECT_NAME} src/main.cpp src/connection_poll.cpp src/data_pipeline.cpp)
+add_executable(${PROJECT_NAME} src/main.cpp src/connection_pool.cpp src/data_pipeline.cpp)
+target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
