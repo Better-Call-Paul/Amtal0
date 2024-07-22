@@ -1,12 +1,12 @@
 file(REMOVE_RECURSE
-  "Amtal"
-  "Amtal.pdb"
-  "CMakeFiles/Amtal.dir/src/connection_pool.cpp.o"
-  "CMakeFiles/Amtal.dir/src/connection_pool.cpp.o.d"
-  "CMakeFiles/Amtal.dir/src/data_pipeline.cpp.o"
-  "CMakeFiles/Amtal.dir/src/data_pipeline.cpp.o.d"
-  "CMakeFiles/Amtal.dir/src/main.cpp.o"
-  "CMakeFiles/Amtal.dir/src/main.cpp.o.d"
+  "CMakeFiles/Amtal.dir/backend/src/connection_pool.cpp.o"
+  "CMakeFiles/Amtal.dir/backend/src/connection_pool.cpp.o.d"
+  "CMakeFiles/Amtal.dir/backend/src/data_pipeline.cpp.o"
+  "CMakeFiles/Amtal.dir/backend/src/data_pipeline.cpp.o.d"
+  "CMakeFiles/Amtal.dir/backend/src/main.cpp.o"
+  "CMakeFiles/Amtal.dir/backend/src/main.cpp.o.d"
+  "bin/Amtal"
+  "bin/Amtal.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

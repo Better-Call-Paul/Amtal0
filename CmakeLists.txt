@@ -2,20 +2,15 @@ cmake_minimum_required(VERSION 3.14)
 
 project(Amtal)
 
-# Set macOS SDK path
-execute_process(
-    COMMAND xcrun --show-sdk-path
-    OUTPUT_VARIABLE MACOS_SDK_PATH
-    OUTPUT_STRIP_TRAILING_WHITESPACE
-)
-set(CMAKE_OSX_SYSROOT ${MACOS_SDK_PATH})
-
+# Set C++ standard
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Add compile options
 add_compile_options(-Wall -Wextra -pedantic)
 
-include_directories(include)
+# Include directories
+include_directories(${CMAKE_SOURCE_DIR}/backend/include)
 
 # Boost configuration
 set(BOOST_ROOT "/opt/homebrew/opt/boost")
@@ -33,5 +28,17 @@ else()
     message(FATAL_ERROR "Boost not found. Please install Boost or specify the correct path.")
 endif()
 
-add_executable(${PROJECT_NAME} src/main.cpp src/connection_pool.cpp src/data_pipeline.cpp)
+# Add executable
+add_executable(${PROJECT_NAME} 
+    backend/src/main.cpp 
+    backend/src/connection_pool.cpp 
+    backend/src/data_pipeline.cpp
+)
+
+# Link libraries
 target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
+
+# Set output directory
+set_target_properties(${PROJECT_NAME} PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
+)

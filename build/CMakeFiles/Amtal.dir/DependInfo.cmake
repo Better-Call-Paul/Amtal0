@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/paulchan/Documents/GitHub/Amtal0/src/connection_pool.cpp" "CMakeFiles/Amtal.dir/src/connection_pool.cpp.o" "gcc" "CMakeFiles/Amtal.dir/src/connection_pool.cpp.o.d"
-  "/Users/paulchan/Documents/GitHub/Amtal0/src/data_pipeline.cpp" "CMakeFiles/Amtal.dir/src/data_pipeline.cpp.o" "gcc" "CMakeFiles/Amtal.dir/src/data_pipeline.cpp.o.d"
-  "/Users/paulchan/Documents/GitHub/Amtal0/src/main.cpp" "CMakeFiles/Amtal.dir/src/main.cpp.o" "gcc" "CMakeFiles/Amtal.dir/src/main.cpp.o.d"
+  "/Users/paulchan/Documents/GitHub/Amtal0/backend/src/connection_pool.cpp" "CMakeFiles/Amtal.dir/backend/src/connection_pool.cpp.o" "gcc" "CMakeFiles/Amtal.dir/backend/src/connection_pool.cpp.o.d"
+  "/Users/paulchan/Documents/GitHub/Amtal0/backend/src/data_pipeline.cpp" "CMakeFiles/Amtal.dir/backend/src/data_pipeline.cpp.o" "gcc" "CMakeFiles/Amtal.dir/backend/src/data_pipeline.cpp.o.d"
+  "/Users/paulchan/Documents/GitHub/Amtal0/backend/src/main.cpp" "CMakeFiles/Amtal.dir/backend/src/main.cpp.o" "gcc" "CMakeFiles/Amtal.dir/backend/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

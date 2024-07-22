@@ -7,12 +7,11 @@ RUN apt-get update && apt-get install -y \
     libboost-all-dev \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app/backend
+WORKDIR /app
 
 # Copy C++ source files and CMakeLists.txt
-COPY backend/CMakeLists.txt .
-COPY backend/src ./src
-COPY backend/include ./include
+COPY CMakeLists.txt .
+COPY backend ./backend
 
 # Create build directory
 RUN mkdir build && cd build
@@ -51,8 +50,8 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy C++ backend
-WORKDIR /app/backend
-COPY --from=cpp-builder /app/backend/build/Amtal .
+WORKDIR /app
+COPY --from=cpp-builder /app/build/bin/Amtal .
 
 # Copy React frontend
 COPY --from=react-builder /app/frontend/build /usr/share/nginx/html
