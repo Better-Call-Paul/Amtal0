@@ -1,2 +1,44 @@
-cmake_minimum_required(VERSION 3.8 FATAL_ERROR)
-project(Amtal LANGUAGES CXX CUDA)
+cmake_minimum_required(VERSION 3.14)
+
+project(Amtal)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Add compile options
+add_compile_options(-Wall -Wextra -pedantic)
+
+# Include directories
+include_directories(${CMAKE_SOURCE_DIR}/backend/include)
+
+# Boost configuration
+set(BOOST_ROOT "/opt/homebrew/opt/boost")
+set(Boost_NO_SYSTEM_PATHS ON)
+set(Boost_USE_STATIC_LIBS OFF)
+set(Boost_USE_MULTITHREADED ON)
+set(Boost_USE_STATIC_RUNTIME OFF)
+find_package(Boost REQUIRED)
+
+if(Boost_FOUND)
+    include_directories(${Boost_INCLUDE_DIRS})
+    message(STATUS "Boost_INCLUDE_DIRS: ${Boost_INCLUDE_DIRS}")
+    message(STATUS "Boost_LIBRARIES: ${Boost_LIBRARIES}")
+else()
+    message(FATAL_ERROR "Boost not found. Please install Boost or specify the correct path.")
+endif()
+
+# Add executable
+add_executable(${PROJECT_NAME} 
+    backend/src/main.cpp 
+    backend/src/connection_pool.cpp 
+    backend/src/data_pipeline.cpp
+)
+
+# Link libraries
+target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
+
+# Set output directory
+set_target_properties(${PROJECT_NAME} PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
+)
