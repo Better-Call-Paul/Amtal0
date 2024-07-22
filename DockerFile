@@ -1,0 +1,67 @@
+# Stage 1: Build C++ backend
+FROM gcc:latest AS cpp-builder
+
+# Install CMake and Boost
+RUN apt-get update && apt-get install -y \
+    cmake \
+    libboost-all-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app/backend
+
+# Copy C++ source files and CMakeLists.txt
+COPY backend/CMakeLists.txt .
+COPY backend/src ./src
+COPY backend/include ./include
+
+# Create build directory
+RUN mkdir build && cd build
+
+# Configure and build the project
+RUN cmake .. \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_CXX_FLAGS="-O3 -march=native -mtune=native -flto -ffast-math"
+RUN cmake --build . --config Release --target Amtal -j$(nproc)
+
+# Stage 2: Build React frontend
+FROM node:14 AS react-builder
+
+WORKDIR /app/frontend
+
+# Copy package.json and package-lock.json
+COPY frontend/package*.json ./
+
+# Install dependencies
+RUN npm ci
+
+# Copy the rest of the frontend code
+COPY frontend .
+
+# Build the React app
+RUN npm run build
+
+# Stage 3: Final image
+FROM debian:buster-slim
+
+# Install runtime dependencies
+RUN apt-get update && apt-get install -y \
+    libboost-system1.67.0 \
+    libboost-thread1.67.0 \
+    nginx \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy C++ backend
+WORKDIR /app/backend
+COPY --from=cpp-builder /app/backend/build/Amtal .
+
+# Copy React frontend
+COPY --from=react-builder /app/frontend/build /usr/share/nginx/html
+
+# Copy nginx configuration
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# Expose ports
+EXPOSE 80 8080
+
+# Start both backend and nginx
+CMD service nginx start && ./Amtal

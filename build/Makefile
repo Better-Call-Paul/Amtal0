@@ -129,6 +129,54 @@ Amtal/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/build
 .PHONY : Amtal/fast
 
+src/connection_pool.o: src/connection_pool.cpp.o
+.PHONY : src/connection_pool.o
+
+# target to build an object file
+src/connection_pool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/connection_pool.cpp.o
+.PHONY : src/connection_pool.cpp.o
+
+src/connection_pool.i: src/connection_pool.cpp.i
+.PHONY : src/connection_pool.i
+
+# target to preprocess a source file
+src/connection_pool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/connection_pool.cpp.i
+.PHONY : src/connection_pool.cpp.i
+
+src/connection_pool.s: src/connection_pool.cpp.s
+.PHONY : src/connection_pool.s
+
+# target to generate assembly for a file
+src/connection_pool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/connection_pool.cpp.s
+.PHONY : src/connection_pool.cpp.s
+
+src/data_pipeline.o: src/data_pipeline.cpp.o
+.PHONY : src/data_pipeline.o
+
+# target to build an object file
+src/data_pipeline.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/data_pipeline.cpp.o
+.PHONY : src/data_pipeline.cpp.o
+
+src/data_pipeline.i: src/data_pipeline.cpp.i
+.PHONY : src/data_pipeline.i
+
+# target to preprocess a source file
+src/data_pipeline.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/data_pipeline.cpp.i
+.PHONY : src/data_pipeline.cpp.i
+
+src/data_pipeline.s: src/data_pipeline.cpp.s
+.PHONY : src/data_pipeline.s
+
+# target to generate assembly for a file
+src/data_pipeline.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/src/data_pipeline.cpp.s
+.PHONY : src/data_pipeline.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +210,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Amtal"
+	@echo "... src/connection_pool.o"
+	@echo "... src/connection_pool.i"
+	@echo "... src/connection_pool.s"
+	@echo "... src/data_pipeline.o"
+	@echo "... src/data_pipeline.i"
+	@echo "... src/data_pipeline.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

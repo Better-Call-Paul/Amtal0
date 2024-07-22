@@ -11,7 +11,7 @@ public:
     Connection_Pool();
     ~Connection_Pool();
 
-    make_connection();
+    void make_connection();
 
     
 

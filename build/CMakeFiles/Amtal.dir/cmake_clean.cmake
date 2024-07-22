@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "Amtal"
   "Amtal.pdb"
+  "CMakeFiles/Amtal.dir/src/connection_pool.cpp.o"
+  "CMakeFiles/Amtal.dir/src/connection_pool.cpp.o.d"
+  "CMakeFiles/Amtal.dir/src/data_pipeline.cpp.o"
+  "CMakeFiles/Amtal.dir/src/data_pipeline.cpp.o.d"
   "CMakeFiles/Amtal.dir/src/main.cpp.o"
   "CMakeFiles/Amtal.dir/src/main.cpp.o.d"
 )

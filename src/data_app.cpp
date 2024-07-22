@@ -2,9 +2,17 @@
 
 namespace Amtal {
 
+class Data_App {
+
+public:
 
 
 
+private:
+
+
+
+};
 }
 
 

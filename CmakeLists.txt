@@ -2,17 +2,36 @@ cmake_minimum_required(VERSION 3.14)
 
 project(Amtal)
 
+# Set macOS SDK path
+execute_process(
+    COMMAND xcrun --show-sdk-path
+    OUTPUT_VARIABLE MACOS_SDK_PATH
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+set(CMAKE_OSX_SYSROOT ${MACOS_SDK_PATH})
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_compile_options(-Wall -Wextra -pedantic)
 
+include_directories(include)
 
-include_directories(include)  
-set(BOOST_ROOT "/opt/homebrew/Cellar/boost/1.85.0")
-find_package(Boost 1.85.0 REQUIRED)
-include_directories(${Boost_INCLUDE_DIRS})
+# Boost configuration
+set(BOOST_ROOT "/opt/homebrew/opt/boost")
+set(Boost_NO_SYSTEM_PATHS ON)
+set(Boost_USE_STATIC_LIBS OFF)
+set(Boost_USE_MULTITHREADED ON)
+set(Boost_USE_STATIC_RUNTIME OFF)
+find_package(Boost REQUIRED)
+
+if(Boost_FOUND)
+    include_directories(${Boost_INCLUDE_DIRS})
+    message(STATUS "Boost_INCLUDE_DIRS: ${Boost_INCLUDE_DIRS}")
+    message(STATUS "Boost_LIBRARIES: ${Boost_LIBRARIES}")
+else()
+    message(FATAL_ERROR "Boost not found. Please install Boost or specify the correct path.")
+endif()
 
 add_executable(${PROJECT_NAME} src/main.cpp src/connection_pool.cpp src/data_pipeline.cpp)
 target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
