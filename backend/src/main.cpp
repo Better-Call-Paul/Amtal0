@@ -12,5 +12,7 @@ namespace Amtal {
 
 int main() {
 
+
+    std::cout << "Stable Realease" << "\n";
     return 0;
 }

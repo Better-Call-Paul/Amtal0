@@ -1,5 +1,4 @@
 cmake_minimum_required(VERSION 3.14)
-
 project(Amtal)
 
 # Set C++ standard
@@ -9,16 +8,15 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Add compile options
 add_compile_options(-Wall -Wextra -pedantic)
 
+# Static linking
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static")
+
 # Include directories
 include_directories(${CMAKE_SOURCE_DIR}/backend/include)
 
 # Boost configuration
-set(BOOST_ROOT "/opt/homebrew/opt/boost")
-set(Boost_NO_SYSTEM_PATHS ON)
-set(Boost_USE_STATIC_LIBS OFF)
-set(Boost_USE_MULTITHREADED ON)
-set(Boost_USE_STATIC_RUNTIME OFF)
-find_package(Boost REQUIRED)
+set(Boost_USE_STATIC_LIBS ON)
+find_package(Boost REQUIRED COMPONENTS system thread)
 
 if(Boost_FOUND)
     include_directories(${Boost_INCLUDE_DIRS})
@@ -28,15 +26,18 @@ else()
     message(FATAL_ERROR "Boost not found. Please install Boost or specify the correct path.")
 endif()
 
-# Add executable
-add_executable(${PROJECT_NAME} 
-    backend/src/main.cpp 
-    backend/src/connection_pool.cpp 
-    backend/src/data_pipeline.cpp
+# Collect all source files
+file(GLOB_RECURSE SOURCES 
+    "${CMAKE_SOURCE_DIR}/backend/src/*.cpp"
+    "${CMAKE_SOURCE_DIR}/backend/src/ApplicationEngine/*.cpp"
+    "${CMAKE_SOURCE_DIR}/backend/src/DataLayer/*.cpp"
 )
 
+# Add executable
+add_executable(${PROJECT_NAME} ${SOURCES})
+
 # Link libraries
-target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} PRIVATE ${Boost_LIBRARIES})
 
 # Set output directory
 set_target_properties(${PROJECT_NAME} PROPERTIES

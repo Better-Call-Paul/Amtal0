@@ -1,11 +1,13 @@
 # Stage 1: Build C++ backend
-FROM gcc:latest AS cpp-builder
+FROM --platform=linux/arm64 gcc:latest AS cpp-builder
 
 # Install CMake and Boost
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
     cmake \
     libboost-all-dev \
-    && rm -rf /var/lib/apt/lists/*
+    --no-install-recommends && \
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
@@ -13,17 +15,15 @@ WORKDIR /app
 COPY CMakeLists.txt .
 COPY backend ./backend
 
-# Create build directory
-RUN mkdir build && cd build
-
-# Configure and build the project
-RUN cmake .. \
+# Create build directory, configure and build the project
+RUN mkdir build && cd build && \
+    cmake .. \
     -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_CXX_FLAGS="-O3 -march=native -mtune=native -flto -ffast-math"
-RUN cmake --build . --config Release --target Amtal -j$(nproc)
+    -DCMAKE_CXX_FLAGS="-O3 -march=native -mtune=native -flto -ffast-math" && \
+    cmake --build . --config Release --target Amtal -j$(nproc)
 
 # Stage 2: Build React frontend
-FROM node:14 AS react-builder
+FROM --platform=linux/arm64 node:16 AS react-builder
 
 WORKDIR /app/frontend
 
@@ -31,7 +31,7 @@ WORKDIR /app/frontend
 COPY frontend/package*.json ./
 
 # Install dependencies
-RUN npm ci
+RUN npm install
 
 # Copy the rest of the frontend code
 COPY frontend .
@@ -40,14 +40,14 @@ COPY frontend .
 RUN npm run build
 
 # Stage 3: Final image
-FROM debian:buster-slim
+FROM --platform=linux/arm64 debian:bullseye-slim
 
-# Install runtime dependencies
-RUN apt-get update && apt-get install -y \
-    libboost-system1.67.0 \
-    libboost-thread1.67.0 \
+# Install only nginx
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
     nginx \
-    && rm -rf /var/lib/apt/lists/*
+    --no-install-recommends && \
+    rm -rf /var/lib/apt/lists/*
 
 # Copy C++ backend
 WORKDIR /app

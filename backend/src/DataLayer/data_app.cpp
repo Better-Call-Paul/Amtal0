@@ -1,4 +1,5 @@
 #include "data_pipeline.hpp"
+#include "datum.hpp"
 
 namespace Amtal {
 
