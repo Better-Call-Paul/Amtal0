@@ -1,6 +1,8 @@
 # Stage 1: Build C++ backend
 FROM --platform=linux/arm64 gcc:latest AS cpp-builder
 
+ENV DATA_API_KEY = db-eduJWssm7L3s64K6A9dLpa98hS7KP
+
 # Install CMake and Boost
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
