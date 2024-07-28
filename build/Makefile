@@ -153,29 +153,29 @@ backend/src/ApplicationEngine/connection_pool.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/ApplicationEngine/connection_pool.cpp.s
 .PHONY : backend/src/ApplicationEngine/connection_pool.cpp.s
 
-backend/src/DataLayer/RequestHandler.o: backend/src/DataLayer/RequestHandler.cpp.o
-.PHONY : backend/src/DataLayer/RequestHandler.o
+backend/src/DataLayer/DataFetcher.o: backend/src/DataLayer/DataFetcher.cpp.o
+.PHONY : backend/src/DataLayer/DataFetcher.o
 
 # target to build an object file
-backend/src/DataLayer/RequestHandler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/DataLayer/RequestHandler.cpp.o
-.PHONY : backend/src/DataLayer/RequestHandler.cpp.o
+backend/src/DataLayer/DataFetcher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.o
+.PHONY : backend/src/DataLayer/DataFetcher.cpp.o
 
-backend/src/DataLayer/RequestHandler.i: backend/src/DataLayer/RequestHandler.cpp.i
-.PHONY : backend/src/DataLayer/RequestHandler.i
+backend/src/DataLayer/DataFetcher.i: backend/src/DataLayer/DataFetcher.cpp.i
+.PHONY : backend/src/DataLayer/DataFetcher.i
 
 # target to preprocess a source file
-backend/src/DataLayer/RequestHandler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/DataLayer/RequestHandler.cpp.i
-.PHONY : backend/src/DataLayer/RequestHandler.cpp.i
+backend/src/DataLayer/DataFetcher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.i
+.PHONY : backend/src/DataLayer/DataFetcher.cpp.i
 
-backend/src/DataLayer/RequestHandler.s: backend/src/DataLayer/RequestHandler.cpp.s
-.PHONY : backend/src/DataLayer/RequestHandler.s
+backend/src/DataLayer/DataFetcher.s: backend/src/DataLayer/DataFetcher.cpp.s
+.PHONY : backend/src/DataLayer/DataFetcher.s
 
 # target to generate assembly for a file
-backend/src/DataLayer/RequestHandler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/DataLayer/RequestHandler.cpp.s
-.PHONY : backend/src/DataLayer/RequestHandler.cpp.s
+backend/src/DataLayer/DataFetcher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.s
+.PHONY : backend/src/DataLayer/DataFetcher.cpp.s
 
 backend/src/DataLayer/data_app.o: backend/src/DataLayer/data_app.cpp.o
 .PHONY : backend/src/DataLayer/data_app.o
@@ -309,9 +309,9 @@ help:
 	@echo "... backend/src/ApplicationEngine/connection_pool.o"
 	@echo "... backend/src/ApplicationEngine/connection_pool.i"
 	@echo "... backend/src/ApplicationEngine/connection_pool.s"
-	@echo "... backend/src/DataLayer/RequestHandler.o"
-	@echo "... backend/src/DataLayer/RequestHandler.i"
-	@echo "... backend/src/DataLayer/RequestHandler.s"
+	@echo "... backend/src/DataLayer/DataFetcher.o"
+	@echo "... backend/src/DataLayer/DataFetcher.i"
+	@echo "... backend/src/DataLayer/DataFetcher.s"
 	@echo "... backend/src/DataLayer/data_app.o"
 	@echo "... backend/src/DataLayer/data_app.i"
 	@echo "... backend/src/DataLayer/data_app.s"

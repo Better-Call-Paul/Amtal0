@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Amtal.dir/backend/src/ApplicationEngine/connection_pool.cpp.o"
   "CMakeFiles/Amtal.dir/backend/src/ApplicationEngine/connection_pool.cpp.o.d"
-  "CMakeFiles/Amtal.dir/backend/src/DataLayer/RequestHandler.cpp.o"
-  "CMakeFiles/Amtal.dir/backend/src/DataLayer/RequestHandler.cpp.o.d"
+  "CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.o"
+  "CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.o.d"
   "CMakeFiles/Amtal.dir/backend/src/DataLayer/data_app.cpp.o"
   "CMakeFiles/Amtal.dir/backend/src/DataLayer/data_app.cpp.o.d"
   "CMakeFiles/Amtal.dir/backend/src/DataLayer/data_pipeline.cpp.o"

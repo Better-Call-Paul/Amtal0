@@ -83,19 +83,19 @@ CMakeFiles/Amtal.dir/backend/src/ApplicationEngine/connection_pool.cpp.s: cmake_
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Amtal.dir/backend/src/ApplicationEngine/connection_pool.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Documents/GitHub/Amtal0/backend/src/ApplicationEngine/connection_pool.cpp -o CMakeFiles/Amtal.dir/backend/src/ApplicationEngine/connection_pool.cpp.s
 
-CMakeFiles/Amtal.dir/backend/src/DataLayer/RequestHandler.cpp.o: CMakeFiles/Amtal.dir/flags.make
-CMakeFiles/Amtal.dir/backend/src/DataLayer/RequestHandler.cpp.o: /Users/paulchan/Documents/GitHub/Amtal0/backend/src/DataLayer/RequestHandler.cpp
-CMakeFiles/Amtal.dir/backend/src/DataLayer/RequestHandler.cpp.o: CMakeFiles/Amtal.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Documents/GitHub/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Amtal.dir/backend/src/DataLayer/RequestHandler.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Amtal.dir/backend/src/DataLayer/RequestHandler.cpp.o -MF CMakeFiles/Amtal.dir/backend/src/DataLayer/RequestHandler.cpp.o.d -o CMakeFiles/Amtal.dir/backend/src/DataLayer/RequestHandler.cpp.o -c /Users/paulchan/Documents/GitHub/Amtal0/backend/src/DataLayer/RequestHandler.cpp
+CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.o: CMakeFiles/Amtal.dir/flags.make
+CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.o: /Users/paulchan/Documents/GitHub/Amtal0/backend/src/DataLayer/DataFetcher.cpp
+CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.o: CMakeFiles/Amtal.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paulchan/Documents/GitHub/Amtal0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.o -MF CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.o.d -o CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.o -c /Users/paulchan/Documents/GitHub/Amtal0/backend/src/DataLayer/DataFetcher.cpp
 
-CMakeFiles/Amtal.dir/backend/src/DataLayer/RequestHandler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Amtal.dir/backend/src/DataLayer/RequestHandler.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Documents/GitHub/Amtal0/backend/src/DataLayer/RequestHandler.cpp > CMakeFiles/Amtal.dir/backend/src/DataLayer/RequestHandler.cpp.i
+CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paulchan/Documents/GitHub/Amtal0/backend/src/DataLayer/DataFetcher.cpp > CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.i
 
-CMakeFiles/Amtal.dir/backend/src/DataLayer/RequestHandler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Amtal.dir/backend/src/DataLayer/RequestHandler.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Documents/GitHub/Amtal0/backend/src/DataLayer/RequestHandler.cpp -o CMakeFiles/Amtal.dir/backend/src/DataLayer/RequestHandler.cpp.s
+CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paulchan/Documents/GitHub/Amtal0/backend/src/DataLayer/DataFetcher.cpp -o CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.s
 
 CMakeFiles/Amtal.dir/backend/src/DataLayer/data_app.cpp.o: CMakeFiles/Amtal.dir/flags.make
 CMakeFiles/Amtal.dir/backend/src/DataLayer/data_app.cpp.o: /Users/paulchan/Documents/GitHub/Amtal0/backend/src/DataLayer/data_app.cpp
@@ -170,7 +170,7 @@ CMakeFiles/Amtal.dir/backend/src/main.cpp.s: cmake_force
 # Object files for target Amtal
 Amtal_OBJECTS = \
 "CMakeFiles/Amtal.dir/backend/src/ApplicationEngine/connection_pool.cpp.o" \
-"CMakeFiles/Amtal.dir/backend/src/DataLayer/RequestHandler.cpp.o" \
+"CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.o" \
 "CMakeFiles/Amtal.dir/backend/src/DataLayer/data_app.cpp.o" \
 "CMakeFiles/Amtal.dir/backend/src/DataLayer/data_pipeline.cpp.o" \
 "CMakeFiles/Amtal.dir/backend/src/DataLayer/datum.cpp.o" \
@@ -181,7 +181,7 @@ Amtal_OBJECTS = \
 Amtal_EXTERNAL_OBJECTS =
 
 bin/Amtal: CMakeFiles/Amtal.dir/backend/src/ApplicationEngine/connection_pool.cpp.o
-bin/Amtal: CMakeFiles/Amtal.dir/backend/src/DataLayer/RequestHandler.cpp.o
+bin/Amtal: CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.o
 bin/Amtal: CMakeFiles/Amtal.dir/backend/src/DataLayer/data_app.cpp.o
 bin/Amtal: CMakeFiles/Amtal.dir/backend/src/DataLayer/data_pipeline.cpp.o
 bin/Amtal: CMakeFiles/Amtal.dir/backend/src/DataLayer/datum.cpp.o
