@@ -2,44 +2,66 @@ cmake_minimum_required(VERSION 3.14)
 project(Amtal)
 
 # Set C++ standard
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 20)  
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Add compile options
 add_compile_options(-Wall -Wextra -pedantic)
 
-# Static linking
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static")
-
-# Include directories
-include_directories(${CMAKE_SOURCE_DIR}/backend/include)
-
-# Boost configuration
-set(Boost_USE_STATIC_LIBS ON)
+# Find required packages
+find_package(Threads REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system thread)
 
-if(Boost_FOUND)
-    include_directories(${Boost_INCLUDE_DIRS})
-    message(STATUS "Boost_INCLUDE_DIRS: ${Boost_INCLUDE_DIRS}")
-    message(STATUS "Boost_LIBRARIES: ${Boost_LIBRARIES}")
-else()
+# Try to find nlohmann_json
+find_package(nlohmann_json 3.2.0 QUIET)
+
+# If not found, try pkg-config
+if(NOT nlohmann_json_FOUND)
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(NLOHMANN_JSON REQUIRED nlohmann_json>=3.2.0)
+endif()
+
+if(NOT Boost_FOUND)
     message(FATAL_ERROR "Boost not found. Please install Boost or specify the correct path.")
 endif()
+
+# Include directories
+include_directories(
+    ${CMAKE_SOURCE_DIR}/backend/include 
+    ${Boost_INCLUDE_DIRS}
+    ${NLOHMANN_JSON_INCLUDE_DIRS}
+)
 
 # Collect all source files
 file(GLOB_RECURSE SOURCES 
     "${CMAKE_SOURCE_DIR}/backend/src/*.cpp"
-    "${CMAKE_SOURCE_DIR}/backend/src/ApplicationEngine/*.cpp"
-    "${CMAKE_SOURCE_DIR}/backend/src/DataLayer/*.cpp"
 )
 
 # Add executable
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 # Link libraries
-target_link_libraries(${PROJECT_NAME} PRIVATE ${Boost_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} PRIVATE 
+    Boost::system
+    Boost::thread
+    ${NLOHMANN_JSON_LIBRARIES}
+    Threads::Threads
+)
+
+# Set static linking if desired (but be cautious with this)
+if(STATIC_LINK)
+    set_target_properties(${PROJECT_NAME} PROPERTIES LINK_SEARCH_START_STATIC 1)
+    set_target_properties(${PROJECT_NAME} PROPERTIES LINK_SEARCH_END_STATIC 1)
+    set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
+endif()
 
 # Set output directory
 set_target_properties(${PROJECT_NAME} PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
 )
+
+# Print some debug information
+message(STATUS "Boost_INCLUDE_DIRS: ${Boost_INCLUDE_DIRS}")
+message(STATUS "Boost_LIBRARIES: ${Boost_LIBRARIES}")
+message(STATUS "NLOHMANN_JSON_INCLUDE_DIRS: ${NLOHMANN_JSON_INCLUDE_DIRS}")
+message(STATUS "NLOHMANN_JSON_LIBRARIES: ${NLOHMANN_JSON_LIBRARIES}")
