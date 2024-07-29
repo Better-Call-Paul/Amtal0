@@ -1,60 +1,37 @@
+#include "data_client.hpp"
 #include <iostream>
-#include <thread>
-#include <vector>
 #include <iomanip>
-#include "data_fetcher.hpp"
-
-void printOHLCVData(const std::vector<Amtal::OHLCV>& data) {
-    std::cout << std::setw(25) << "Timestamp" << std::setw(10) << "Open" << std::setw(10) << "High" 
-              << std::setw(10) << "Low" << std::setw(10) << "Close" << std::setw(10) << "Volume" << std::endl;
-    
-    for (const auto& ohlcv : data) {
-        auto time = std::chrono::system_clock::to_time_t(ohlcv.timestamp.d_dateTime);
-        std::cout << std::setw(25) << std::put_time(std::localtime(&time), "%Y-%m-%d %H:%M:%S")
-                  << std::setw(10) << ohlcv.open.d_value
-                  << std::setw(10) << ohlcv.high.d_value
-                  << std::setw(10) << ohlcv.low.d_value
-                  << std::setw(10) << ohlcv.close.d_value
-                  << std::setw(10) << ohlcv.volume.d_number << std::endl;
-    }
-}
 
 int main() {
-    DataFetcher fetcher;
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(0);
 
-    // Main server loop
-    std::string input;
-    while (true) {
-        std::cout << "Enter command (or 'exit' to quit): ";
-        std::getline(std::cin, input);
-        
-        if (input == "exit") {
-            break;
-        }
+    const char* api_key = std::getenv("data_api_key");
+    if (!api_key) {
+        std::cerr << "Error: Environment variable 'data_api_key' is not set." << "\n";
+        return 1;
+    }
+    Amtal::DataClient client(api_key);
 
-        // Parse input
-        std::vector<std::string> tokens;
-        std::istringstream iss(input);
-        std::string token;
-        while (std::getline(iss, token, ' ')) {
-            tokens.push_back(token);
-        }
+    auto now = std::chrono::system_clock::now();
+    auto start = now - std::chrono::hours(1);
+    auto end = now;
 
-        if (!tokens.empty() && tokens[0] == "historical") {
-            if (tokens.size() < 6) {
-                std::cout << "Usage: historical <dataset> <symbols> <schema> <start> <end>" << std::endl;
-                continue;
-            }
-            try {
-                std::vector<Amtal::OHLCV> data = fetcher.fetchHistoricalData(
-                    tokens[1], tokens[2], tokens[3], tokens[4], tokens[5]);
-                printOHLCVData(data);
-            } catch (const std::exception& e) {
-                std::cerr << "Error: " << e.what() << std::endl;
-            }
-        } else {
-            std::cout << "Unknown command" << std::endl;
+    try {
+        std::vector<Amtal::OHLCV> data = client.getOHLCVData("ESM2", start, end);
+
+        std::cout << "OHLCV data for ESM2:" << "\n";
+        std::cout << std::setw(25) << "Open" << std::setw(10) << "High" << std::setw(10) << "Low" 
+                  << std::setw(10) << "Close" << std::setw(10) << "Volume" << "\n";
+
+        for (const auto& ohlcv : data) {
+            std::cout << std::fixed << std::setprecision(2)
+                      << std::setw(25) << ohlcv.open << std::setw(10) << ohlcv.high << std::setw(10) << ohlcv.low 
+                      << std::setw(10) << ohlcv.close << std::setw(10) << ohlcv.volume << "\n";
         }
+    } catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << "\n";
+        return 1;
     }
 
     return 0;

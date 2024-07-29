@@ -9,10 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/paulchan/Documents/GitHub/Amtal0/backend/src/ApplicationEngine/connection_pool.cpp" "CMakeFiles/Amtal.dir/backend/src/ApplicationEngine/connection_pool.cpp.o" "gcc" "CMakeFiles/Amtal.dir/backend/src/ApplicationEngine/connection_pool.cpp.o.d"
-  "/Users/paulchan/Documents/GitHub/Amtal0/backend/src/DataLayer/DataFetcher.cpp" "CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.o" "gcc" "CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.o.d"
   "/Users/paulchan/Documents/GitHub/Amtal0/backend/src/DataLayer/data_app.cpp" "CMakeFiles/Amtal.dir/backend/src/DataLayer/data_app.cpp.o" "gcc" "CMakeFiles/Amtal.dir/backend/src/DataLayer/data_app.cpp.o.d"
+  "/Users/paulchan/Documents/GitHub/Amtal0/backend/src/DataLayer/data_client.cpp" "CMakeFiles/Amtal.dir/backend/src/DataLayer/data_client.cpp.o" "gcc" "CMakeFiles/Amtal.dir/backend/src/DataLayer/data_client.cpp.o.d"
   "/Users/paulchan/Documents/GitHub/Amtal0/backend/src/DataLayer/data_pipeline.cpp" "CMakeFiles/Amtal.dir/backend/src/DataLayer/data_pipeline.cpp.o" "gcc" "CMakeFiles/Amtal.dir/backend/src/DataLayer/data_pipeline.cpp.o.d"
-  "/Users/paulchan/Documents/GitHub/Amtal0/backend/src/DataLayer/datum.cpp" "CMakeFiles/Amtal.dir/backend/src/DataLayer/datum.cpp.o" "gcc" "CMakeFiles/Amtal.dir/backend/src/DataLayer/datum.cpp.o.d"
   "/Users/paulchan/Documents/GitHub/Amtal0/backend/src/datapipeline.cpp" "CMakeFiles/Amtal.dir/backend/src/datapipeline.cpp.o" "gcc" "CMakeFiles/Amtal.dir/backend/src/datapipeline.cpp.o.d"
   "/Users/paulchan/Documents/GitHub/Amtal0/backend/src/main.cpp" "CMakeFiles/Amtal.dir/backend/src/main.cpp.o" "gcc" "CMakeFiles/Amtal.dir/backend/src/main.cpp.o.d"
   )

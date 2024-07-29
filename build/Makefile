@@ -153,30 +153,6 @@ backend/src/ApplicationEngine/connection_pool.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/ApplicationEngine/connection_pool.cpp.s
 .PHONY : backend/src/ApplicationEngine/connection_pool.cpp.s
 
-backend/src/DataLayer/DataFetcher.o: backend/src/DataLayer/DataFetcher.cpp.o
-.PHONY : backend/src/DataLayer/DataFetcher.o
-
-# target to build an object file
-backend/src/DataLayer/DataFetcher.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.o
-.PHONY : backend/src/DataLayer/DataFetcher.cpp.o
-
-backend/src/DataLayer/DataFetcher.i: backend/src/DataLayer/DataFetcher.cpp.i
-.PHONY : backend/src/DataLayer/DataFetcher.i
-
-# target to preprocess a source file
-backend/src/DataLayer/DataFetcher.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.i
-.PHONY : backend/src/DataLayer/DataFetcher.cpp.i
-
-backend/src/DataLayer/DataFetcher.s: backend/src/DataLayer/DataFetcher.cpp.s
-.PHONY : backend/src/DataLayer/DataFetcher.s
-
-# target to generate assembly for a file
-backend/src/DataLayer/DataFetcher.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/DataLayer/DataFetcher.cpp.s
-.PHONY : backend/src/DataLayer/DataFetcher.cpp.s
-
 backend/src/DataLayer/data_app.o: backend/src/DataLayer/data_app.cpp.o
 .PHONY : backend/src/DataLayer/data_app.o
 
@@ -201,6 +177,30 @@ backend/src/DataLayer/data_app.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/DataLayer/data_app.cpp.s
 .PHONY : backend/src/DataLayer/data_app.cpp.s
 
+backend/src/DataLayer/data_client.o: backend/src/DataLayer/data_client.cpp.o
+.PHONY : backend/src/DataLayer/data_client.o
+
+# target to build an object file
+backend/src/DataLayer/data_client.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/DataLayer/data_client.cpp.o
+.PHONY : backend/src/DataLayer/data_client.cpp.o
+
+backend/src/DataLayer/data_client.i: backend/src/DataLayer/data_client.cpp.i
+.PHONY : backend/src/DataLayer/data_client.i
+
+# target to preprocess a source file
+backend/src/DataLayer/data_client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/DataLayer/data_client.cpp.i
+.PHONY : backend/src/DataLayer/data_client.cpp.i
+
+backend/src/DataLayer/data_client.s: backend/src/DataLayer/data_client.cpp.s
+.PHONY : backend/src/DataLayer/data_client.s
+
+# target to generate assembly for a file
+backend/src/DataLayer/data_client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/DataLayer/data_client.cpp.s
+.PHONY : backend/src/DataLayer/data_client.cpp.s
+
 backend/src/DataLayer/data_pipeline.o: backend/src/DataLayer/data_pipeline.cpp.o
 .PHONY : backend/src/DataLayer/data_pipeline.o
 
@@ -224,30 +224,6 @@ backend/src/DataLayer/data_pipeline.s: backend/src/DataLayer/data_pipeline.cpp.s
 backend/src/DataLayer/data_pipeline.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/DataLayer/data_pipeline.cpp.s
 .PHONY : backend/src/DataLayer/data_pipeline.cpp.s
-
-backend/src/DataLayer/datum.o: backend/src/DataLayer/datum.cpp.o
-.PHONY : backend/src/DataLayer/datum.o
-
-# target to build an object file
-backend/src/DataLayer/datum.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/DataLayer/datum.cpp.o
-.PHONY : backend/src/DataLayer/datum.cpp.o
-
-backend/src/DataLayer/datum.i: backend/src/DataLayer/datum.cpp.i
-.PHONY : backend/src/DataLayer/datum.i
-
-# target to preprocess a source file
-backend/src/DataLayer/datum.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/DataLayer/datum.cpp.i
-.PHONY : backend/src/DataLayer/datum.cpp.i
-
-backend/src/DataLayer/datum.s: backend/src/DataLayer/datum.cpp.s
-.PHONY : backend/src/DataLayer/datum.s
-
-# target to generate assembly for a file
-backend/src/DataLayer/datum.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/DataLayer/datum.cpp.s
-.PHONY : backend/src/DataLayer/datum.cpp.s
 
 backend/src/datapipeline.o: backend/src/datapipeline.cpp.o
 .PHONY : backend/src/datapipeline.o
@@ -309,18 +285,15 @@ help:
 	@echo "... backend/src/ApplicationEngine/connection_pool.o"
 	@echo "... backend/src/ApplicationEngine/connection_pool.i"
 	@echo "... backend/src/ApplicationEngine/connection_pool.s"
-	@echo "... backend/src/DataLayer/DataFetcher.o"
-	@echo "... backend/src/DataLayer/DataFetcher.i"
-	@echo "... backend/src/DataLayer/DataFetcher.s"
 	@echo "... backend/src/DataLayer/data_app.o"
 	@echo "... backend/src/DataLayer/data_app.i"
 	@echo "... backend/src/DataLayer/data_app.s"
+	@echo "... backend/src/DataLayer/data_client.o"
+	@echo "... backend/src/DataLayer/data_client.i"
+	@echo "... backend/src/DataLayer/data_client.s"
 	@echo "... backend/src/DataLayer/data_pipeline.o"
 	@echo "... backend/src/DataLayer/data_pipeline.i"
 	@echo "... backend/src/DataLayer/data_pipeline.s"
-	@echo "... backend/src/DataLayer/datum.o"
-	@echo "... backend/src/DataLayer/datum.i"
-	@echo "... backend/src/DataLayer/datum.s"
 	@echo "... backend/src/datapipeline.o"
 	@echo "... backend/src/datapipeline.i"
 	@echo "... backend/src/datapipeline.s"
