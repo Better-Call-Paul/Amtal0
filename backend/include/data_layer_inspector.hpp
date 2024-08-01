@@ -3,10 +3,6 @@
 
 namespace Amtal {
 
-typedef struct Datum {
-
-};
-
 
 }
 
