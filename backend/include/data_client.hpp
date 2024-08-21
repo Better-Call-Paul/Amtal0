@@ -10,29 +10,26 @@
 
 namespace Amtal {
 
-struct OHLCV {
-    double open;
-    double high;
-    double low;
-    double close;
-    double volume;
-};
-
 class DataClient {
 public:
-    DataClient(const std::string& apiKey);
+    DataClient(std::string api_key);
     ~DataClient();
 
-    std::vector<OHLCV> getOHLCVData(const std::string& symbol, 
-                                    const std::chrono::system_clock::time_point& start,
-                                    const std::chrono::system_clock::time_point& end);
+    std::string parse_historial_data(const std::string& dataset, 
+                                  const std::string& start, 
+                                  const std::string& end, 
+                                  const std::string& symbols, 
+                                  const std::string& schema, 
+                                  const std::string& encoding);
+
+    
+   
 
 private:
-    static size_t WriteCallback(void* contents, size_t size, size_t nmemb, std::string* output);
-    std::string makeRequest(const std::string& url, const std::string& params);
-    
     CURL* curl;
     std::string apiKey;
+
+    
 };
 
 } // namespace Amtal
