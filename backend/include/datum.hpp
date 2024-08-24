@@ -4,6 +4,23 @@
 #include <chrono>
 namespace Amtal {
 
+enum class Side { Ask, Bid, None };
+enum class Action { Add, Cancel, Modify, Clear, Trade, Fill };
+
+struct Datum {
+    std::chrono::system_clock::time_point d_dateTime;
+    uint32_t d_instrumentId;
+    double d_price;
+    uint32_t d_size;
+    Side d_side;
+    Action d_action;
+    uint64_t d_orderId;
+    int64_t d_tsInDelta;
+    uint64_t d_tsOut;
+    uint16_t d_publisherId;
+    uint32_t d_sequence;
+};
+/*
 struct Datum {
 
     using Time = std::chrono::hh_mm_ss<std::chrono::seconds>;
@@ -20,6 +37,7 @@ struct Datum {
         void* d_userDefinedType;
     }; 
 };
+*/
 }
 
 #endif 

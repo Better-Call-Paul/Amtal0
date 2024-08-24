@@ -1,12 +1,16 @@
 # Stage 1: Build C++ backend
-FROM --platform=linux/arm64 gcc:latest AS cpp-builder
+FROM --platform=linux/arm64 debian:bullseye-slim AS cpp-builder
 
-# Install CMake, Boost, and nlohmann_json
+# Install build essentials, CMake, Boost, nlohmann/json, and libcurl
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    build-essential \
+    gcc \
+    g++ \
     cmake \
     libboost-all-dev \
     nlohmann-json3-dev \
+    libcurl4-openssl-dev \
     --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
 
@@ -24,7 +28,7 @@ RUN mkdir build && cd build && \
     cmake --build . --config Release --target Amtal -j$(nproc)
 
 # Stage 2: Build React frontend
-FROM --platform=linux/arm64 node:16 AS react-builder
+FROM --platform=linux/arm64 node:16-bullseye-slim AS react-builder
 
 WORKDIR /app/frontend
 
@@ -41,20 +45,15 @@ COPY frontend .
 RUN npm run build
 
 # Stage 3: Final image
-FROM --platform=linux/arm64 gcc:latest
+FROM --platform=linux/arm64 debian:bullseye-slim
 
-# Install nginx and required libraries
+# Install runtime dependencies
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
-    nginx \
+    libstdc++6 \
     libboost-system1.74.0 \
-    libboost-filesystem1.74.0 \
-    libboost-program-options1.74.0 \
     libboost-thread1.74.0 \
-    libboost-chrono1.74.0 \
-    libboost-atomic1.74.0 \
-    libboost-date-time1.74.0 \
-    libcurl4 \
+    nginx \
     --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
 
