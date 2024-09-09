@@ -225,30 +225,6 @@ backend/src/DataLayer/data_pipeline.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/DataLayer/data_pipeline.cpp.s
 .PHONY : backend/src/DataLayer/data_pipeline.cpp.s
 
-backend/src/datapipeline.o: backend/src/datapipeline.cpp.o
-.PHONY : backend/src/datapipeline.o
-
-# target to build an object file
-backend/src/datapipeline.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/datapipeline.cpp.o
-.PHONY : backend/src/datapipeline.cpp.o
-
-backend/src/datapipeline.i: backend/src/datapipeline.cpp.i
-.PHONY : backend/src/datapipeline.i
-
-# target to preprocess a source file
-backend/src/datapipeline.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/datapipeline.cpp.i
-.PHONY : backend/src/datapipeline.cpp.i
-
-backend/src/datapipeline.s: backend/src/datapipeline.cpp.s
-.PHONY : backend/src/datapipeline.s
-
-# target to generate assembly for a file
-backend/src/datapipeline.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/datapipeline.cpp.s
-.PHONY : backend/src/datapipeline.cpp.s
-
 backend/src/main.o: backend/src/main.cpp.o
 .PHONY : backend/src/main.o
 
@@ -273,6 +249,30 @@ backend/src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/main.cpp.s
 .PHONY : backend/src/main.cpp.s
 
+backend/src/utils.o: backend/src/utils.cpp.o
+.PHONY : backend/src/utils.o
+
+# target to build an object file
+backend/src/utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/utils.cpp.o
+.PHONY : backend/src/utils.cpp.o
+
+backend/src/utils.i: backend/src/utils.cpp.i
+.PHONY : backend/src/utils.i
+
+# target to preprocess a source file
+backend/src/utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/utils.cpp.i
+.PHONY : backend/src/utils.cpp.i
+
+backend/src/utils.s: backend/src/utils.cpp.s
+.PHONY : backend/src/utils.s
+
+# target to generate assembly for a file
+backend/src/utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Amtal.dir/build.make CMakeFiles/Amtal.dir/backend/src/utils.cpp.s
+.PHONY : backend/src/utils.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -294,12 +294,12 @@ help:
 	@echo "... backend/src/DataLayer/data_pipeline.o"
 	@echo "... backend/src/DataLayer/data_pipeline.i"
 	@echo "... backend/src/DataLayer/data_pipeline.s"
-	@echo "... backend/src/datapipeline.o"
-	@echo "... backend/src/datapipeline.i"
-	@echo "... backend/src/datapipeline.s"
 	@echo "... backend/src/main.o"
 	@echo "... backend/src/main.i"
 	@echo "... backend/src/main.s"
+	@echo "... backend/src/utils.o"
+	@echo "... backend/src/utils.i"
+	@echo "... backend/src/utils.s"
 .PHONY : help
 
 

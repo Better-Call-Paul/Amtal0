@@ -55,7 +55,8 @@ RUN apt-get update && \
     libboost-thread1.74.0 \
     nginx \
     --no-install-recommends && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* \ 
+    libcurl4-openssl-dev
 
 # Copy C++ backend
 WORKDIR /app

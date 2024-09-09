@@ -38,6 +38,9 @@ file(GLOB_RECURSE SOURCES
     "${CMAKE_SOURCE_DIR}/backend/src/*.cpp"
 )
 
+message(STATUS "Detected source files: ${SOURCES}")
+
+
 # Add executable
 add_executable(${PROJECT_NAME} ${SOURCES})
 
