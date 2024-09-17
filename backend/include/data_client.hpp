@@ -17,16 +17,19 @@ public:
     DataClient(std::string api_key);
     ~DataClient();
 
-    std::string parse_historical_data(const std::string& market_data);
+    std::string request_historical_data(const std::string& dataset, const std::string& symbols,
+                                        const std::string& schema, const std::string& start, 
+                                        const std::string& end, const std::string& encoding,
+                                        const std::stringstream& url);
 
-    std::vector<Datum> process_json_response(const std::string& json_response);
+    std::vector<Datum> parse_historical_data(const std::string& market_data);
 
 private:
     CURL* curl;
     std::string apiKey;
 
     std::string format_timestamp(const std::string& timestamp);
-    static size_t write_call_back(void* contents, size_t size, size_t number_elements, std::string* user_pointer);
+    static size_t write_call_back(void* contents, size_t size, size_t number_of_elements, std::string* user_pointer);
 
     
 };
