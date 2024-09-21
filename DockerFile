@@ -1,75 +1,124 @@
-# Stage 1: Build C++ backend
-FROM --platform=linux/arm64 debian:bullseye-slim AS cpp-builder
+FROM --platform=linux/arm64 debian:bookworm-slim AS cpp-builder
 
-# Install build essentials, CMake, Boost, nlohmann/json, and libcurl
+# Install build essentials
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
-    build-essential \
-    gcc \
-    g++ \
-    cmake \
-    libboost-all-dev \
-    nlohmann-json3-dev \
-    libcurl4-openssl-dev \
-    --no-install-recommends && \
+        build-essential \
+        gcc-11 \
+        g++-11 \
+        cmake \
+        libboost-all-dev \
+        nlohmann-json3-dev \
+        libcurl4-openssl-dev \
+        pkg-config \
+        --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
+
+# Set GCC and G++ to version 11
+RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 100 && \
+    update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 100
 
 WORKDIR /app
 
-# Copy C++ source files and CMakeLists.txt
 COPY CMakeLists.txt .
 COPY backend ./backend
 
-# Create build directory, configure and build the project
 RUN mkdir build && cd build && \
     cmake .. \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_CXX_FLAGS="-O3 -march=native -mtune=native -flto -ffast-math" && \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS="-O3 -march=native -mtune=native -flto -ffast-math" && \
     cmake --build . --config Release --target Amtal -j$(nproc)
 
-# Stage 2: Build React frontend
-FROM --platform=linux/arm64 node:16-bullseye-slim AS react-builder
+# Build Next.js frontend with TypeScript
+FROM --platform=linux/arm64 node:18.17.0-bookworm-slim AS react-builder
 
 WORKDIR /app/frontend
 
-# Copy package.json and package-lock.json
+# Copy package.json and package-lock.json first for better caching
 COPY frontend/package*.json ./
 
-# Install dependencies
 RUN npm install
 
-# Copy the rest of the frontend code
-COPY frontend .
+# Install missing dependencies
+RUN npm install @react-three/fiber @react-three/drei three
 
-# Build the React app
+COPY frontend ./
+
+# Build the Next.js app for production
 RUN npm run build
 
-# Stage 3: Final image
-FROM --platform=linux/arm64 debian:bullseye-slim
+# Final image with Supervisor and Nginx
+FROM --platform=linux/arm64 debian:bookworm-slim
 
 # Install runtime dependencies
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
-    libstdc++6 \
-    libboost-system1.74.0 \
-    libboost-thread1.74.0 \
-    nginx \
-    --no-install-recommends && \
-    rm -rf /var/lib/apt/lists/* \ 
-    libcurl4-openssl-dev
+        libstdc++6 \
+        libboost-system1.74.0 \
+        libboost-thread1.74.0 \
+        libcurl4 \
+        nginx \
+        supervisor \
+        nodejs \
+        npm \
+        curl \
+        --no-install-recommends && \
+    rm -rf /var/lib/apt/lists/*
+
+# Create a non-root user
+RUN useradd -m appuser
+
+# Create log directories and set permissions
+RUN mkdir -p /var/log/nginx \
+              /var/log/amtal \
+              /var/log/supervisor \
+              /var/log/nextjs && \
+    chmod -R 755 /var/log/nginx \
+               /var/log/amtal \
+               /var/log/supervisor \
+               /var/log/nextjs && \
+    chown -R appuser:appuser /var/log/nginx \
+                               /var/log/amtal \
+                               /var/log/supervisor \
+                               /var/log/nextjs
 
 # Copy C++ backend
 WORKDIR /app
 COPY --from=cpp-builder /app/build/bin/Amtal .
 
-# Copy React frontend
-COPY --from=react-builder /app/frontend/build /usr/share/nginx/html
+# Copy Next.js build and install dependencies
+WORKDIR /app/frontend
+COPY --from=react-builder /app/frontend/.next ./.next
+COPY --from=react-builder /app/frontend/package*.json ./
+COPY --from=react-builder /app/frontend/public ./public
+RUN npm install --only=production
 
-# Copy nginx configuration
-COPY nginx.conf /etc/nginx/nginx.conf
+# Copy Nginx and Supervisor configurations
+COPY config/nginx.conf /etc/nginx/nginx.conf
+COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-# Expose ports
-EXPOSE 80 8080
+# Ensure log directories exist and have correct permissions
+RUN mkdir -p /var/log/nginx \
+              /var/log/amtal \
+              /var/log/supervisor \
+              /var/log/nextjs && \
+    chmod -R 755 /var/log/nginx \
+               /var/log/amtal \
+               /var/log/supervisor \
+               /var/log/nextjs && \
+    chown -R appuser:appuser /var/log/nginx \
+                               /var/log/amtal \
+                               /var/log/supervisor \
+                               /var/log/nextjs
 
-# Start both backend and nginx
-CMD service nginx start && ./Amtal
+# Change ownership to non-root user
+RUN chown -R appuser:appuser /app /usr/share/nginx/html /var/log/nginx /var/log/amtal /var/log/supervisor /var/log/nextjs
+
+# Switch to the non-root user
+USER appuser
+
+# Expose necessary ports
+EXPOSE 80 3000 8080
+
+# Start Supervisor with the specified configuration file
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
