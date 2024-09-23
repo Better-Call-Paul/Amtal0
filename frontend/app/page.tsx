@@ -1,24 +1,84 @@
-"use client"
+"use client";
 
 import React, { useRef, useMemo, useState } from 'react'
 import { Canvas, useFrame, useLoader, useThree } from '@react-three/fiber'
 import { OrbitControls, Sphere, Line } from '@react-three/drei'
 import * as THREE from 'three'
 
-// Define the props for the Particles component
-interface ParticlesProps {
-  onSelectParticle: (orbit: number[]) => void
+const Grid = () => {
+  const gridRef = useRef<THREE.Object3D>(null!)
+
+  const grid = useMemo(() => {
+    const gridObject = new THREE.Object3D()
+    const material = new THREE.LineBasicMaterial({ color: 0xcccccc, transparent: true, opacity: 0.3 })
+    const radius = 1.02 // Slightly larger than the Earth
+    const segments = 36
+    const lines = segments / 2
+
+    // Horizontal lines (latitudes)
+    for (let i = 0; i < segments; i++) {
+      const lat = (i / segments) * Math.PI - Math.PI / 2
+      const latRadius = Math.cos(lat) * radius
+
+      const geometry = new THREE.BufferGeometry()
+      const positions = []
+
+      for (let j = 0; j <= segments; j++) {
+        const lon = (j / segments) * Math.PI * 2
+        positions.push(
+          latRadius * Math.sin(lon),
+          radius * Math.sin(lat),
+          latRadius * Math.cos(lon)
+        )
+      }
+
+      geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3))
+      const line = new THREE.Line(geometry, material)
+      gridObject.add(line)
+    }
+
+    // Vertical lines (longitudes)
+    for (let i = 0; i < segments; i++) {
+      const lon = (i / segments) * Math.PI * 2
+      const geometry = new THREE.BufferGeometry()
+      const positions = []
+
+      for (let j = 0; j <= segments; j++) {
+        const lat = (j / segments) * Math.PI - Math.PI / 2
+        const latRadius = Math.cos(lat) * radius
+        positions.push(
+          latRadius * Math.sin(lon),
+          radius * Math.sin(lat),
+          latRadius * Math.cos(lon)
+        )
+      }
+
+      geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3))
+      const line = new THREE.Line(geometry, material)
+      gridObject.add(line)
+    }
+
+    return gridObject
+  }, [])
+
+  useFrame(() => {
+    if (gridRef.current) {
+      gridRef.current.rotation.y += 0.001
+    }
+  })
+
+  return <primitive object={grid} ref={gridRef} />
 }
 
-const Particles: React.FC<ParticlesProps> = ({ onSelectParticle }) => {
+const Particles = ({ onSelectParticle }) => {
   const particlesRef = useRef<THREE.Points>(null!)
   const { raycaster, camera, mouse } = useThree()
-
+  
   const particlesCount = 2000
   const [positions, speeds, orbits] = useMemo(() => {
     const positions = new Float32Array(particlesCount * 3)
     const speeds = new Float32Array(particlesCount)
-    const orbits: number[][] = []
+    const orbits = []
     for (let i = 0; i < particlesCount; i++) {
       const theta = Math.random() * Math.PI * 2
       const phi = Math.acos((Math.random() * 2) - 1)
@@ -26,10 +86,10 @@ const Particles: React.FC<ParticlesProps> = ({ onSelectParticle }) => {
       positions[i * 3] = r * Math.sin(phi) * Math.cos(theta)
       positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta)
       positions[i * 3 + 2] = r * Math.cos(phi)
-      speeds[i] = 0.001 + Math.random() * 0.003 // Random speed for each particle
-
+      speeds[i] = 0.0002 + Math.random() * 0.0008 // Slower speeds
+      
       // Generate orbit points
-      const orbitPoints: number[] = []
+      const orbitPoints = []
       for (let j = 0; j < 100; j++) {
         const angle = (j / 100) * Math.PI * 2
         orbitPoints.push(
@@ -41,38 +101,35 @@ const Particles: React.FC<ParticlesProps> = ({ onSelectParticle }) => {
       orbits.push(orbitPoints)
     }
     return [positions, speeds, orbits]
-  }, [particlesCount])
+  }, [])
 
-  // Rotate particles around the y-axis
-  useFrame(() => {
+  useFrame((state) => {
     if (particlesRef.current) {
-      const positionsArray = particlesRef.current.geometry.attributes.position.array as Float32Array
+      const positions = particlesRef.current.geometry.attributes.position.array as Float32Array
       for (let i = 0; i < particlesCount; i++) {
         const i3 = i * 3
-        const x = positionsArray[i3]
-        const z = positionsArray[i3 + 2]
+        const x = positions[i3]
+        const y = positions[i3 + 1]
+        const z = positions[i3 + 2]
 
         // Rotate around the y-axis
         const angle = speeds[i]
         const newX = x * Math.cos(angle) - z * Math.sin(angle)
         const newZ = x * Math.sin(angle) + z * Math.cos(angle)
 
-        positionsArray[i3] = newX
-        positionsArray[i3 + 2] = newZ
+        positions[i3] = newX
+        positions[i3 + 2] = newZ
       }
       particlesRef.current.geometry.attributes.position.needsUpdate = true
     }
   })
 
-  // Handle click events on particles
-  const handleClick = () => {
+  const handleClick = (event) => {
     raycaster.setFromCamera(mouse, camera)
     const intersects = raycaster.intersectObject(particlesRef.current)
     if (intersects.length > 0) {
       const index = intersects[0].index
-      if (index !== undefined && orbits[index]) {
-        onSelectParticle(orbits[index])
-      }
+      onSelectParticle(orbits[index])
     }
   }
 
@@ -91,12 +148,12 @@ const Particles: React.FC<ParticlesProps> = ({ onSelectParticle }) => {
   )
 }
 
-const Earth: React.FC = () => {
+const Earth = () => {
   const earthRef = useRef<THREE.Mesh>(null!)
   const texture = useLoader(THREE.TextureLoader, '/assets/3d/texture_earth.jpg')
 
-  // Create a black and white version of the texture
-  const blackAndWhiteTexture = useMemo(() => {
+  // Create a grey and black version of the texture
+  const greyAndBlackTexture = useMemo(() => {
     const canvas = document.createElement('canvas')
     const context = canvas.getContext('2d')
     canvas.width = texture.image.width
@@ -106,14 +163,19 @@ const Earth: React.FC = () => {
     const data = imageData.data
     for (let i = 0; i < data.length; i += 4) {
       const avg = (data[i] + data[i + 1] + data[i + 2]) / 3
-      data[i] = data[i + 1] = data[i + 2] = avg > 128 ? 200 : 0 // Whitish grey for land, black for water
+      if (avg > 128) {
+        // Land: grey
+        data[i] = data[i + 1] = data[i + 2] = 150
+      } else {
+        // Ocean: black
+        data[i] = data[i + 1] = data[i + 2] = 0
+      }
     }
     context!.putImageData(imageData, 0, 0)
     return new THREE.CanvasTexture(canvas)
   }, [texture])
 
-  // Rotate the Earth mesh
-  useFrame(() => {
+  useFrame((state) => {
     if (earthRef.current) {
       earthRef.current.rotation.y += 0.001
     }
@@ -121,19 +183,20 @@ const Earth: React.FC = () => {
 
   return (
     <Sphere ref={earthRef} args={[1, 64, 64]}>
-      <meshStandardMaterial map={blackAndWhiteTexture} />
+      <meshStandardMaterial map={greyAndBlackTexture} />
     </Sphere>
   )
 }
 
-const Scene: React.FC = () => {
-  const [selectedOrbit, setSelectedOrbit] = useState<number[] | null>(null)
+const Scene = () => {
+  const [selectedOrbit, setSelectedOrbit] = useState(null)
 
   return (
     <>
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} />
       <Earth />
+      <Grid />
       <Particles onSelectParticle={setSelectedOrbit} />
       {selectedOrbit && (
         <Line
@@ -147,7 +210,7 @@ const Scene: React.FC = () => {
   )
 }
 
-const Component: React.FC = () => {
+export default function Component() {
   return (
     <div className="w-full h-screen bg-black">
       <Canvas camera={{ position: [0, 0, 2.5] }}>
@@ -169,5 +232,3 @@ const Component: React.FC = () => {
     </div>
   )
 }
-
-export default Component

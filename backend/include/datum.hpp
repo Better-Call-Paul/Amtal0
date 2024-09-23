@@ -175,7 +175,6 @@ private:
     struct always_false : std::false_type {};
 };
 
-// Optimized Datum struct using FastVariant
 struct Datum {
     using Time = std::chrono::hh_mm_ss<std::chrono::seconds>;
     using DateTime = std::chrono::system_clock::time_point;

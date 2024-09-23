@@ -20,10 +20,27 @@ int main() {
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(nullptr);
 
+    std::string api_key = "db-WnvDYCgcbJTkAWDbJnf3gwy4C876T";
 
-    
-    Amtal::Datum d(1);
-    d.log_datum();
+    Amtal::DataClient client(api_key);
+
+    std::string dataset = "GLBX.MDP3";
+    std::string symbols = "ESM2";
+    std::string schema = "ohlcv-1s";
+    std::string start = "2022-06-06T14:30";
+    std::string end = "2022-06-06T14:40";
+    std::string encoding = "json";
+    std::string url = "https://hist.databento.com/v0/timeseries.get_range";
+
+    std::string data = client.request_historical_data(dataset, symbols, schema, start, end, encoding, url);
+
+    std::cout << "Raw Data:\n" << data << "\n";
+
+    std::vector<Amtal::Datum> data_vector = client.parse_historical_data(data);
+
+    for (const auto& datum : data_vector) {
+        datum.log_datum();
+    }
     
     int server_fd = socket(AF_INET, SOCK_STREAM, 0);
     if (server_fd == -1) return 1;

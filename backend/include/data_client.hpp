@@ -20,7 +20,7 @@ public:
     std::string request_historical_data(const std::string& dataset, const std::string& symbols,
                                         const std::string& schema, const std::string& start, 
                                         const std::string& end, const std::string& encoding,
-                                        const std::stringstream& url);
+                                        const std::string& url);
 
     std::vector<Datum> parse_historical_data(const std::string& market_data);
 
