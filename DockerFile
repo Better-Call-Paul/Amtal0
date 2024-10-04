@@ -7,6 +7,7 @@ RUN apt-get update && \
         gcc-11 \
         g++-11 \
         cmake \
+        librdkafka \
         libboost-all-dev \
         nlohmann-json3-dev \
         libcurl4-openssl-dev \
@@ -14,7 +15,6 @@ RUN apt-get update && \
         --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
 
-# Set GCC and G++ to version 11
 RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 100 && \
     update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 100
 
@@ -39,12 +39,10 @@ COPY frontend/package*.json ./
 
 RUN npm install
 
-# Install missing dependencies
 RUN npm install @react-three/fiber @react-three/drei three
 
 COPY frontend ./
 
-# Build the Next.js app for production
 RUN npm run build
 
 # Final image with Supervisor and Nginx
@@ -65,10 +63,9 @@ RUN apt-get update && \
         --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
 
-# Create a non-root user
 RUN useradd -m appuser
 
-# Create log directories and set permissions
+# Create directories for logging 
 RUN mkdir -p /var/log/nginx \
               /var/log/amtal \
               /var/log/supervisor \
@@ -82,7 +79,7 @@ RUN mkdir -p /var/log/nginx \
                                /var/log/supervisor \
                                /var/log/nextjs
 
-# Copy C++ backend
+# Copy backend 
 WORKDIR /app
 COPY --from=cpp-builder /app/build/bin/Amtal .
 

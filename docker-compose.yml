@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  amtal:
+    image: amtal 
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "3000:3000"
+      - "8080:8080"
+    secrets:
+      - api_key_secret
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - frontend_public:/app/frontend/public
+    networks:
+      - amtal_network
+
+secrets:
+  api_key_secret:
+    external: true
+
+volumes:
+  frontend_public:
+
+networks:
+  amtal_network:
