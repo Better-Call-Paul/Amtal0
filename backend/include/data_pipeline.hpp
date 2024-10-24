@@ -1,5 +1,5 @@
-#ifndef DATA_PIPELINE_H
-#define DATA_PIPELINE_H
+#ifndef DATA_PIPELINE_HPP
+#define DATA_PIPELINE_HPP
 
 #include <curl/curl.h>
 
