@@ -3,36 +3,36 @@
 
 #include <string>
 #include <vector>
-#include <chrono>
-#include <curl/curl.h>
-#include <nlohmann/json.hpp>
-#include "datum.hpp"
-
-using json = nlohmann::json;
+#include <map>
 
 namespace Amtal {
 
 class DataClient {
 public:
-    DataClient(std::string api_key);
+    DataClient(const std::string& apiKey);
+
     ~DataClient();
 
-    std::string request_historical_data(const std::string& dataset, const std::string& symbols,
-                                        const std::string& schema, const std::string& start, 
-                                        const std::string& end, const std::string& encoding,
-                                        const std::string& url);
-
-    std::vector<Datum> parse_historical_data(const std::string& market_data);
+    std::string get_historical_data(
+        const std::string& dataset,
+        const std::string& start,
+        const std::string& end,
+        const std::string& symbols = "",
+        const std::string& schema = "",
+        const std::string& encoding = "json",
+        const std::map<std::string, std::string>& additionalParams = {});
 
 private:
-    CURL* curl;
-    std::string apiKey;
+    std::string apiKey_;
+    const std::string baseUrl_ = "https://hist.databento.com/v0/timeseries.get_range";
 
-    std::string format_timestamp(const std::string& timestamp);
-    static size_t write_call_back(void* contents, size_t size, size_t number_of_elements, std::string* user_pointer);
+    std::string http_get(const std::string& url, const std::string& auth_header);
 
-    
+    std::string build_query_string(const std::map<std::string, std::string>& params);
+
+    std::string parse_json(const std::string input); 
 };
+
 
 } // namespace Amtal
 
